@@ -6,4 +6,16 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  html: {
+    prettier: {
+      tabWidth: 4,
+      useTabs: false,
+      htmlWhitespaceSensitivity: 'strict',
+      removeEmptyComments: true,
+    },
+    highlighter: {
+      showLineNumbers: true,
+      wrapLines: false,
+    },
+  },
 }

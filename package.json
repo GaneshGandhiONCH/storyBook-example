@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "Global-project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,13 +13,12 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.15.5",
-    "@storybook/addon-actions": "^6.3.8",
-    "@storybook/addon-essentials": "^6.3.8",
-    "@storybook/addon-links": "^6.3.8",
-    "@storybook/html": "^6.3.8",
+    "@storybook/addon-actions": "^6.3.9",
+    "@storybook/addon-essentials": "^6.3.9",
+    "@storybook/addon-links": "^6.3.9",
+    "@storybook/html": "^6.3.9",
+    "@whitespace/storybook-addon-html": "^5.0.0",
     "babel-loader": "^8.2.2"
   },
-  "dependencies": {
-    "@storybook/addon-storysource": "^6.3.8"
-  }
+  "dependencies": {}
 }
