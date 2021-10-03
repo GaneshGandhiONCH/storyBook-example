@@ -1,4 +1,4 @@
-import './button.css';
+import './button.scss';
 
 export default {
   title: 'Components/Button',
@@ -9,7 +9,7 @@ export default {
 
 
 const Template = ({ label }) => {
-  return `<button type="button" class="storybook-button">${label}</button>`;
+  return `<button type="button" class="primary-button">${label}</button>`;
 };
 
 
