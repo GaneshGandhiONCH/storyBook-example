@@ -1,19 +1,28 @@
-import './button.scss';
+import './buttons.scss';
+
 
 export default {
-  title: 'Components/Button',
+  title: 'Components/Buttons',
   argTypes: {
     label: { control: 'text' },
+    className: { control: 'text' },
   },
 };
 
 
-const Template = ({ label }) => {
-  return `<button type="button" class="primary-button">${label}</button>`;
+const Template = ({ label, className }) => {
+  return `<button type="button" class="button ${className}">${label}</button>`;
 };
 
 
-export const Button = Template.bind({});
-Button.args = {
+export const Default = Template.bind({});
+Default.args = {
   label: 'Submit',
+  className: 'default-button'
+};
+
+export const DefaultOutline = Template.bind({});
+DefaultOutline.args = {
+  label: 'Submit',
+  className: 'default-outline-button'
 };
