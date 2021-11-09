@@ -1,5 +1,5 @@
 import './default.scss';
-import {Template} from './Template';
+import {Template} from '../Template';
 
 export default {
   title: 'Components/Buttons',

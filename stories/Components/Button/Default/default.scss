@@ -1,4 +1,4 @@
-@import "../../global/style/style";
+@import "../../../global/style/style";
 
 $primary: #1ea7fd;
 $primary-hover: #0495f3;
@@ -40,16 +40,14 @@ $secondary-focus: #e3aae5;
   text-transform: capitalize;
 }
 
-.button-outline-primary {
-  color: $primary;
-  background-color: #fff;
-  border: 1px solid $primary;
-  transition: background-color .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out;
+.button-primary {
+  color: #fff;
+  background-color: $primary;
+  border: 0;
+  transition: background-color .2s ease-in-out;
 
   &:hover {
-    color: #fff;
     background-color: $primary-hover;
-    border-color: $primary-hover;
   }
 
   &:focus {
@@ -58,20 +56,17 @@ $secondary-focus: #e3aae5;
 
   &:active {
     background-color: $primary-active;
-    border-color: $primary-active;
   }
 }
 
-.button-outline-secondary {
-  color: $secondary;
-  background-color: #fff;
-  border: 1px solid $secondary;
-  transition: background-color .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out;
+.button-secondary {
+  color: #fff;
+  background-color: $secondary;
+  border: 0;
+  transition: background-color .2s ease-in-out;
 
   &:hover {
-    color: #fff;
     background-color: $secondary-hover;
-    border-color: $secondary-hover;
   }
 
   &:focus {
@@ -80,6 +75,5 @@ $secondary-focus: #e3aae5;
 
   &:active {
     background-color: $secondary-active;
-    border-color: $secondary-active;
   }
 }
