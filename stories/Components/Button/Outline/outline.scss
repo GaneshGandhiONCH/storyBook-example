@@ -5,12 +5,7 @@ $primary-hover: #0495f3;
 $primary-active: #0891ea;
 $primary-focus: #98d3ff;
 
-$secondary: #ce81d3;
-$secondary-hover: #bf6ec4;
-$secondary-active: #ae4fb3;
-$secondary-focus: #e3aae5;
-
-.button {
+.button-outline {
   display: inline-block;
   text-align: center;
   padding: 1.6rem 3.4rem;
@@ -20,30 +15,10 @@ $secondary-focus: #e3aae5;
   letter-spacing: .1rem;
   cursor: pointer;
   line-height: 1;
-
-  &[disable] {
-    opacity: .5;
-    pointer-events: none;
-    outline: none;
-  }
-}
-
-.button-uppercase {
-  text-transform: uppercase;
-}
-
-.button-lowercase {
-  text-transform: lowercase;
-}
-
-.button-capitalize {
-  text-transform: capitalize;
-}
-
-.button-outline-primary {
   color: $primary;
   background-color: #fff;
   border: 1px solid $primary;
+  text-decoration: none;
   transition: background-color .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out;
 
   &:hover {
@@ -60,26 +35,23 @@ $secondary-focus: #e3aae5;
     background-color: $primary-active;
     border-color: $primary-active;
   }
-}
 
-.button-outline-secondary {
-  color: $secondary;
-  background-color: #fff;
-  border: 1px solid $secondary;
-  transition: background-color .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out;
-
-  &:hover {
-    color: #fff;
-    background-color: $secondary-hover;
-    border-color: $secondary-hover;
+  &--small {
+    padding: 1rem 2.4rem;
   }
 
-  &:focus {
-    outline: 4px solid $secondary-focus;
+  &--medium {
+    padding: 1.6rem 3.4rem;
   }
 
-  &:active {
-    background-color: $secondary-active;
-    border-color: $secondary-active;
+  &--large {
+    padding: 2rem 6rem;
+    font-size: 1.6rem;
+  }
+
+  &[disable] {
+    opacity: .5;
+    pointer-events: none;
+    outline: none;
   }
 }

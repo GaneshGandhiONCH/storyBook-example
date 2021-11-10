@@ -1,5 +1,4 @@
 import './outline.scss';
-import {Template} from '../Template';
 
 export default {
   title: 'Components/Buttons',
@@ -8,22 +7,29 @@ export default {
     tag: {
       options: ['button', 'input', 'a'],
       control: { type: 'select' }
-    },
-    className: {
-      options: ['button-outline-primary', 'button-outline-secondary'],
-      control: { type: 'select' }
-    },
-    textTransform: {
-      options: ['button-uppercase', 'button-lowercase', 'button-capitalize'],
-      control: { type: 'select' }
     }
-  },
+  }
+};
+
+const Template = ({ label, tag, size }) => {
+  let button;
+
+  if (tag === 'input') {
+    button = `<input type="submit" class="button-outline ${size}" placeholder="${label}" />`;
+  }
+  else if (tag === 'a') {
+    button = `<a href="#!" class="button-outline ${size}">${label}</a>`;
+  }
+  else if (tag === 'button') {
+    button = `<button type="button" class="button-outline ${size}">${label}</button>`;
+  }
+
+  return button;
 };
 
 export const Outline = Template.bind({});
 Outline.args = {
   label: 'Submit',
-  className: 'button-outline-primary',
   tag: 'button',
-  textTransform: 'button-uppercase'
+  size: 'button-outline--medium'
 };

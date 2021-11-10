@@ -1,5 +1,4 @@
 import './default.scss';
-import {Template} from '../Template';
 
 export default {
   title: 'Components/Buttons',
@@ -9,25 +8,32 @@ export default {
       options: ['button', 'input', 'a'],
       control: { type: 'select' }
     },
-    className: {
-      options: ['button-primary', 'button-secondary'],
-      control: { type: 'select' }
-    },
-    textTransform: {
-      options: ['button-uppercase', 'button-lowercase', 'button-capitalize'],
+    size: {
+      options: ['button-outline--small', 'button-outline--medium', 'button-outline--large'],
       control: { type: 'select' }
     }
   },
 };
 
+const Template = ({ label, tag, size }) => {
+  let button;
 
+  if (tag === 'input') {
+    button = `<input type="submit" class="button-primary ${size}" placeholder="${label}" />`;
+  }
+  else if (tag === 'a') {
+    button = `<a href="#!" class="button-primary ${size}">${label}</a>`;
+  }
+  else if (tag === 'button') {
+    button = `<button type="button" class="button-primary ${size}">${label}</button>`;
+  }
 
-
+  return button;
+};
 
 export const Default = Template.bind({});
 Default.args = {
   label: 'Submit',
-  className: 'button-primary',
   tag: 'button',
-  textTransform: 'button-uppercase'
+  size: 'button-outline--medium'
 };
