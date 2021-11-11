@@ -5,7 +5,7 @@ $primary-hover: #0495f3;
 $primary-active: #0891ea;
 $primary-focus: #98d3ff;
 
-.button-outline {
+.button-primary {
   display: inline-block;
   text-align: center;
   padding: 1.6rem 3.4rem;
@@ -15,16 +15,15 @@ $primary-focus: #98d3ff;
   letter-spacing: .1rem;
   cursor: pointer;
   line-height: 1;
-  color: $primary;
-  background-color: #fff;
-  border: 1px solid $primary;
   text-decoration: none;
-  transition: background-color .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out;
+  color: #fff;
+  background-color: $primary;
+  border: 0;
+  border-radius: 5px;
+  transition: background-color .2s ease-in-out;
 
   &:hover {
-    color: #fff;
     background-color: $primary-hover;
-    border-color: $primary-hover;
   }
 
   &:focus {
@@ -33,7 +32,6 @@ $primary-focus: #98d3ff;
 
   &:active {
     background-color: $primary-active;
-    border-color: $primary-active;
   }
 
   &--small {

@@ -1,5 +1,70 @@
 @import "../../../global/style/style";
 
-.header-1 {
+$link-color: #212832;
+$link-hover-color: #1ea7fd;
 
+.header-1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0;
+
+  &__logo {
+    width: 100%;
+    height: 100%;
+
+    &-link {
+      display: block;
+      width: 134px;
+      height: 34px;
+
+      &:focus {
+        outline: 1px dashed $link-hover-color;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__list {
+
+    &-links {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    &-item {
+
+      & + & {
+        margin-left: 64px;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $link-color;
+    transition: color .2s ease-in-out;
+
+    &--current,
+    &:hover {
+      color: $link-hover-color;
+    }
+
+    &:focus {
+      outline: 1px dashed $link-hover-color;
+    }
+  }
+
+  &__button {
+    margin-left: 60px;
+  }
 }
