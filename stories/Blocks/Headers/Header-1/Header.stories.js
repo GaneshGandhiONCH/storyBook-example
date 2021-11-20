@@ -28,7 +28,6 @@ const Template = () => {
       </ul>
       <a href="#!" class="header-1__button button-outline button-outline--small">Sign up</a>
     </nav>
-    
   </header-1>`;
 };
 
