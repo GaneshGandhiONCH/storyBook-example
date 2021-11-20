@@ -27,6 +27,20 @@ const Template = () => {
         </li>              
       </ul>
       <a href="#!" class="header-1__button button-outline button-outline--small">Sign up</a>
+      <div class="lang-switcher-1" data-switcher>
+        <button class="lang-switcher-1__current" data-switcher-current>
+          <span class="lang-switcher-1__current-name">ENG</span>
+          <svg class="lang-switcher-1__current-icon" width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg" > <path d="M0.694458 0.5L5.3473 5L10.0002 0.5"></path> </svg>
+          </button>
+          <ul class="lang-switcher-1__list" data-switcher-list="">
+            <li class="lang-switcher-1__list-item">
+              <a href="#!" class="lang-switcher-1__link">UA</a>
+            </li>
+            <li class="lang-switcher-1__list-item">
+              <a href="#!" class="lang-switcher-1__link">FR</a>
+            </li>
+          </ul>
+      </div>
     </nav>
   </header-1>`;
 };
