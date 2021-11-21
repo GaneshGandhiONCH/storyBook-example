@@ -1,5 +1,5 @@
 import './lang-switcher.scss';
-import {LangSwitcher} from './langSwitcher';
+import {LangSwitcher} from './LangSwitcher';
 
 export default {
   title: 'Components/LangSwitchers',
@@ -19,6 +19,9 @@ const Template = ({ current, firstLang, secondLang }) => {
       </svg>
     </button>
     <ul class="lang-switcher-1__list" data-switcher-list>
+      <li class="lang-switcher-1__list-item">
+        <a href="#!" class="lang-switcher-1__link lang-switcher-1__link--current">${current}</a>
+      </li>
       <li class="lang-switcher-1__list-item">
         <a href="#!" class="lang-switcher-1__link">${firstLang}</a>
       </li>
