@@ -24,10 +24,6 @@ $media-desktop-lg: 1920px;
   right: 0;
   z-index: 9000;
 
-  @media (min-width: $media-tablet-md) {
-    padding: 40px 0;
-  }
-
   &__logo {
     width: 100%;
     height: 100%;
@@ -60,7 +56,19 @@ $media-desktop-lg: 1920px;
     padding-top: 100px;
     opacity: 0;
     pointer-events: none;
+    overflow-y: auto;
     transition: opacity .2s ease-in-out;
+
+    @media (min-width: $media-desktop-sm ) {
+      opacity: 1;
+      pointer-events: auto;
+      position: static;
+      flex-direction: row;
+      justify-content: flex-end;
+      padding-top: 0;
+      height: auto;
+      overflow-y: initial;
+    }
 
     .header-1--open & {
       opacity: 1;
@@ -77,6 +85,10 @@ $media-desktop-lg: 1920px;
       margin: 0;
       padding: 0;
       flex-direction: column;
+
+      @media (min-width: $media-desktop-sm ) {
+        flex-direction: row;
+      }
     }
 
     &-item {
@@ -84,7 +96,7 @@ $media-desktop-lg: 1920px;
       & + & {
         margin-top: 30px;
 
-        @media (min-width: $media-tablet-lg ) {
+        @media (min-width: $media-desktop-sm ) {
           margin-left: 64px;
           margin-top: 0;
         }
@@ -94,11 +106,19 @@ $media-desktop-lg: 1920px;
 
   &__link {
     font-weight: 600;
-    font-size: 17px;
-    line-height: 23px;
+    font-size: 1.8rem;
+    line-height: 1.4;
     text-decoration: none;
     color: $link-color;
     transition: color .2s ease-in-out, background-color .2s ease-in-out;
+
+    @media (min-width: $media-tablet-md ) {
+      font-size: 2.4rem;
+    }
+
+    @media (min-width: $media-desktop-sm ) {
+      font-size: 1.6rem;
+    }
 
     &--current,
     &:hover {
@@ -111,24 +131,33 @@ $media-desktop-lg: 1920px;
   }
 
   &__button {
+    font-size: 1.8rem;
+    line-height: 1.4;
     margin-top: 30px;
 
-    @media (min-width: $media-tablet-lg ) {
+    @media (min-width: $media-desktop-sm ) {
       margin-left: 60px;
       margin-top: 0;
+      font-size: 2.4rem;
     }
   }
 
   &__lang-switcher {
     margin-top: 75px;
+    margin-bottom: 20px;
 
-    @media (min-width: $media-tablet-lg ) {
+    @media (min-width: $media-desktop-sm ) {
       margin-left: 40px;
       margin-top: 0;
+      margin-bottom: 0;
     }
 
     .lang-switcher-1__current {
       display: none;
+
+      @media (min-width: $media-desktop-sm ) {
+        display: flex;
+      }
     }
 
     .lang-switcher-1__list {
@@ -136,16 +165,49 @@ $media-desktop-lg: 1920px;
       opacity: 1;
       pointer-events: auto;
       box-shadow: none;
-      flex-direction: revert;
+      flex-direction: row;
+      transform: translateY(0);
+
+      @media (min-width: $media-desktop-sm ) {
+        flex-direction: column;
+        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(20px);
+      }
+    }
+
+    .lang-switcher-1__list--active {
+      @media (min-width: $media-desktop-sm ) {
+        pointer-events: initial;
+        transform: translateY(10px);
+        opacity: 1;
+      }
     }
 
     .lang-switcher-1__link--current {
       display: block;
       color: $link-hover-color;
+
+      @media (min-width: $media-desktop-sm ) {
+        display: none;
+      }
     }
 
     .lang-switcher-1__list-item + .lang-switcher-1__list-item {
       margin-left: 25px;
+
+      @media (min-width: $media-desktop-sm ) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__hamburger {
+    @media (min-width: $media-desktop-sm ) {
+      display: none;
     }
   }
 }

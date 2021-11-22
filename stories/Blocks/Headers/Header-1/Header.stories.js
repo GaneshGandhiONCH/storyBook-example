@@ -46,7 +46,7 @@ const Template = () => {
           </ul>
       </div>
     </nav>
-    <button type="button" class="hamburger-1" data-hamburger>
+    <button type="button" class="header-1__hamburger hamburger-1" data-hamburger>
       <span class="hamburger-1__line"></span>
       <span class="hamburger-1__line"></span>
       <span class="hamburger-1__line"></span>
