@@ -93,6 +93,7 @@ $media-desktop-lg: 1920px;
 
     &-item {
       text-align: center;
+      position: relative;
 
       & + & {
         margin-top: 30px;
@@ -100,6 +101,37 @@ $media-desktop-lg: 1920px;
         @media (min-width: $media-desktop-sm ) {
           margin-left: 64px;
           margin-top: 0;
+        }
+      }
+
+      &--has-submenu {
+
+        &:hover .header-1__sublist {
+          @media (min-width: $media-desktop-sm) {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+          }
+        }
+
+        &:hover {
+          & > .header-1__link {
+            @media (min-width: $media-desktop-sm) {
+              color: $link-hover-color;
+            }
+          }
+
+          .header-1__link-dropdown-arrow {
+            @media (min-width: $media-desktop-sm) {
+              transform: rotateX(180deg);
+            }
+          }
+
+          .header-1__link-dropdown-arrow path {
+            @media (min-width: $media-desktop-sm) {
+              stroke: $link-hover-color;
+            }
+          }
         }
       }
     }
@@ -112,8 +144,34 @@ $media-desktop-lg: 1920px;
     overflow: hidden;
     height: 0;
 
+    @media (min-width: $media-desktop-sm) {
+      position: absolute;
+      top: calc(100% + 10px);
+      left: -16px;
+      height: auto;
+      width: 210px;
+      background: #FFFFFF;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      padding: 16px;
+      transform: translateY(10px);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform .2s ease-in-out;
+    }
+
     &-item {
       margin-top: 20px;
+
+      @media (min-width: $media-desktop-sm) {
+        margin-top: 0;
+      }
+
+      & + & {
+        @media (min-width: $media-desktop-sm) {
+          margin-top: 20px;
+        }
+      }
     }
   }
 
@@ -159,6 +217,19 @@ $media-desktop-lg: 1920px;
       display: flex;
       align-items: center;
       justify-content: center;
+
+      @media (min-width: $media-desktop-sm) {
+        padding-bottom: 20px;
+        margin-bottom: -20px;
+      }
+
+      &:focus + .header-1__sublist {
+        @media (min-width: $media-desktop-sm) {
+          transform: translateY(0);
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
     }
 
     &-dropdown-arrow {
@@ -169,6 +240,10 @@ $media-desktop-lg: 1920px;
       height: 24px;
       margin-left: 10px;
       transition: transform .5s ease-in-out;
+
+      @media (min-width: $media-desktop-sm) {
+        transition: transform .2s ease-in-out;
+      }
 
       &-icon {
         display: block;

@@ -2,7 +2,6 @@ import {Hamburger} from "../../../Components/Hamburgers/Hamburger-1/Hamburger";
 import {DropDownLinks} from "./DropDownLInks";
 
 
-
 export function MobileMenu() {
   // INITS
   new Hamburger();

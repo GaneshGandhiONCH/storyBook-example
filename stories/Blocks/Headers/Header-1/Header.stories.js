@@ -17,7 +17,7 @@ const Template = () => {
         <li class="header-1__list-item">
           <a href="#!" class="header-1__link">Product</a>
         </li>
-        <li class="header-1__list-item" data-header-dropdown-list-wrapper>
+        <li class="header-1__list-item header-1__list-item--has-submenu" data-header-dropdown-list-wrapper>
           <a href="#!" class="header-1__link header-1__link--has-submenu">
             Features
             <span class="header-1__link-dropdown-arrow" data-header-dropdpwn-link>

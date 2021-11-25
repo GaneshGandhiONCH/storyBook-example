@@ -13,8 +13,10 @@ export function DropDownLinks() {
 
   // HANDLERS
   function handleOnClickDropdownButton(event) {
-    event.preventDefault();
-    $this.toggleDropdown(this);
+    if (window.innerWidth < 1280) {
+      event.preventDefault();
+      $this.toggleDropdown(this);
+    }
   }
 
   // FUNCTIONS & METHODS
