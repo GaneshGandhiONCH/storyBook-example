@@ -3,3 +3,11 @@
 *:before {
   box-sizing: border-box;
 }
+
+a,
+button,
+img {
+  user-select: none;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}

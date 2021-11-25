@@ -26,6 +26,7 @@
     "style-loader": "2.0.0"
   },
   "dependencies": {
+    "animejs": "^3.2.1",
     "normalize-scss": "^7.0.1"
   }
 }

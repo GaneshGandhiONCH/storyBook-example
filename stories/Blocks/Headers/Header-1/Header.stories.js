@@ -17,8 +17,32 @@ const Template = () => {
         <li class="header-1__list-item">
           <a href="#!" class="header-1__link">Product</a>
         </li>
-        <li class="header-1__list-item">
-          <a href="#!" class="header-1__link">Customers</a>
+        <li class="header-1__list-item" data-header-dropdown-list-wrapper>
+          <a href="#!" class="header-1__link header-1__link--has-submenu">
+            Features
+            <span class="header-1__link-dropdown-arrow" data-header-dropdpwn-link>
+              <svg class="header-1__link-dropdown-arrow-icon" width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.694458 0.5L5.3473 5L10.0002 0.5" />
+              </svg>
+            </span>      
+          </a>
+          <ul class="header-1__sublist" data-header-dropdpwn-list="close">
+            <li class="header-1__sublist-item">
+              <a href="#!" class="header-1__link">Sed ut perspiciatis unde</a>
+            </li>
+            <li class="header-1__sublist-item">
+              <a href="#!" class="header-1__link">Denouncing pleasure</a>
+            </li>
+            <li class="header-1__sublist-item">
+              <a href="#!" class="header-1__link">Nor again</a>
+            </li>
+            <li class="header-1__sublist-item">
+              <a href="#!" class="header-1__link">At vero eos et</a>
+            </li>
+            <li class="header-1__sublist-item">
+              <a href="#!" class="header-1__link">Nam libero tempore</a>
+            </li>
+          </ul>
         </li>
         <li class="header-1__list-item">
           <a href="#!" class="header-1__link">Pricing</a>
