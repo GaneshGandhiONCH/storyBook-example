@@ -20,13 +20,13 @@ const Template = () => {
         <li class="header-1__list-item header-1__list-item--has-submenu" data-header-dropdown-list-wrapper>
           <a href="#!" class="header-1__link header-1__link--has-submenu">
             Features
-            <span class="header-1__link-dropdown-arrow" data-header-dropdpwn-link>
+            <span class="header-1__link-dropdown-arrow" data-header-dropdown-link>
               <svg class="header-1__link-dropdown-arrow-icon" width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0.694458 0.5L5.3473 5L10.0002 0.5" />
               </svg>
             </span>      
           </a>
-          <ul class="header-1__sublist" data-header-dropdpwn-list="close">
+          <ul class="header-1__sublist" data-header-dropdown-list="close">
             <li class="header-1__sublist-item">
               <a href="#!" class="header-1__link">Sed ut perspiciatis unde</a>
             </li>

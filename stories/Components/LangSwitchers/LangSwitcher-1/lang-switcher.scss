@@ -6,6 +6,20 @@ $media-tablet-lg: 1024px;
 
 .lang-switcher-1 {
   position: relative;
+  padding-bottom: 10px;
+  margin-top: 10px;
+
+  &:hover {
+    .lang-switcher-1__list {
+      pointer-events: initial;
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .lang-switcher-1__current-icon {
+      transform: rotateX(180deg);
+    }
+  }
 
   &__current {
     display: flex;
@@ -37,6 +51,7 @@ $media-tablet-lg: 1024px;
 
     &-icon {
       margin-left: 8px;
+      transition: transform .2s ease-in-out;
 
       path {
         stroke: $text-color;
@@ -58,23 +73,22 @@ $media-tablet-lg: 1024px;
     border-radius: 5px;
     position: absolute;
     top: 100%;
-    left: 0;
+    left: -3px;
     width: 70px;
     pointer-events: none;
-    transform: translateY(20px);
+    transform: translateY(0);
     opacity: 0;
     transition: opacity .2s ease-in-out, transform .2s ease-in-out;
 
-    &--active {
+    .lang-switcher-1-open & {
       pointer-events: initial;
-      transform: translateY(10px);
+      transform: translateY(0);
       opacity: 1;
     }
 
     &-item {
       width: 100%;
     }
-
   }
 
   &__link {

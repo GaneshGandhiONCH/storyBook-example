@@ -1,5 +1,5 @@
 import './hamburger.scss';
-import {Hamburger} from "./Hamburger";
+// import {Hamburger} from "./Hamburger";
 
 export default {
   title: 'Components/Hamburger'

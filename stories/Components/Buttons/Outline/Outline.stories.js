@@ -1,7 +1,7 @@
 import './outline.scss';
 
 export default {
-  title: 'Components/Buttons',
+  title: 'Components/Buttons/Outline',
   argTypes: {
     label: { control: 'text' },
     tag: {

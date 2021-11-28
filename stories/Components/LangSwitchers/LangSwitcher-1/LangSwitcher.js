@@ -5,25 +5,17 @@ export function LangSwitcher() {
   if (!switchers.length) return;
   const currentsLangs = document.querySelectorAll('[data-switcher-current]');
   const activeListClass = 'lang-switcher-1__list--active';
-
+  const activeClass = 'lang-switcher-1-open';
 
   // LISTENERS
-  currentsLangs.forEach(current => {
-    current.addEventListener('click', handleOnClick, false);
-  })
-
   document.addEventListener('click', handleOnClickDocument, false);
 
   document.addEventListener('scroll', handleOnScroll, false);
 
-  document.addEventListener('keydown', handleOnKeyDown, false);
+  document.addEventListener('keydown', handleOnKeyDown);
 
 
   // HANDLERS
-  function handleOnClick() {
-    $this.toggle(this);
-  }
-
   function handleOnClickDocument(e) {
       if(!e.target.closest('[data-switcher]')) {
         $this.closeAll();
@@ -38,19 +30,30 @@ export function LangSwitcher() {
     if (e.key === "Escape") {
       $this.closeAll();
     }
+
+    if (e.key === "Tab") {
+      setTimeout(() => {
+        $this.toggleLangSwitcherOnTab();
+      }, 0);
+    }
   }
 
 
   // FUNCTIONS & METHODS
-  $this.toggle = (button) => {
-    const list = button.closest('[data-switcher]').querySelector('[data-switcher-list]');
-    list.classList.toggle(activeListClass);
+  $this.closeAll = () => {
+    switchers.forEach(switcher => {
+      switcher.classList.remove(activeClass);
+    })
   }
 
-  $this.closeAll = () => {
-    const listsLangs = document.querySelectorAll('[data-switcher-list]');
-    listsLangs.forEach(list => {
-      list.classList.remove(activeListClass);
-    })
+  $this.toggleLangSwitcherOnTab = () => {
+    const activeElement = document.activeElement;
+    const activeElementContainer = activeElement.closest('[data-switcher]');
+
+    if (activeElementContainer) {
+      activeElementContainer.classList.add(activeClass)
+    } else {
+      $this.closeAll();
+    }
   }
 }

@@ -106,9 +106,14 @@ $media-desktop-lg: 1920px;
 
       &--has-submenu {
 
+        @media (min-width: $media-desktop-sm) {
+          padding-bottom: 20px;
+          margin-bottom: -20px;
+        }
+
         &:hover .header-1__sublist {
           @media (min-width: $media-desktop-sm) {
-            transform: translateY(0);
+            transform: translateY(-20px);
             opacity: 1;
             pointer-events: auto;
           }
@@ -154,10 +159,18 @@ $media-desktop-lg: 1920px;
       box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
       border-radius: 5px;
       padding: 16px;
-      transform: translateY(10px);
+      transform: translateY(0);
       opacity: 0;
       pointer-events: none;
-      transition: transform .2s ease-in-out;
+      transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+    }
+
+    &--visible-on-focus {
+      @media (min-width: $media-desktop-sm) {
+        transform: translateY(-20px);
+        opacity: 1;
+        pointer-events: auto;
+      }
     }
 
     &-item {
@@ -217,19 +230,6 @@ $media-desktop-lg: 1920px;
       display: flex;
       align-items: center;
       justify-content: center;
-
-      @media (min-width: $media-desktop-sm) {
-        padding-bottom: 20px;
-        margin-bottom: -20px;
-      }
-
-      &:focus + .header-1__sublist {
-        @media (min-width: $media-desktop-sm) {
-          transform: translateY(0);
-          opacity: 1;
-          pointer-events: auto;
-        }
-      }
     }
 
     &-dropdown-arrow {

@@ -14,7 +14,7 @@ export function MobileMenu() {
   const activeClass = 'header-1--open';
 
   // LISTENERS
-  hamburger?.addEventListener('click', handleOnClickHamburger, false)
+  hamburger?.addEventListener('click', handleOnClickHamburger, false);
 
   // HANDLERS
   function handleOnClickHamburger() {

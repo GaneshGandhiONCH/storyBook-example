@@ -1,7 +1,7 @@
-import './default.scss';
+import './primary.scss';
 
 export default {
-  title: 'Components/Buttons',
+  title: 'Components/Buttons/Primary',
   argTypes: {
     label: { control: 'text' },
     tag: {
@@ -31,8 +31,8 @@ const Template = ({ label, tag, size }) => {
   return button;
 };
 
-export const Default = Template.bind({});
-Default.args = {
+export const Primary = Template.bind({});
+Primary.args = {
   label: 'Submit',
   tag: 'button',
   size: 'button-outline--medium'
