@@ -26,8 +26,8 @@ const Template = ({ title, className, tag, alignment }) => {
 };
 
 
-export const Title = Template.bind({});
-Title.args = {
+export const Titles = Template.bind({});
+Titles.args = {
   tag: 'h1',
   title: 'This is Title',
   className: 'title-h1',

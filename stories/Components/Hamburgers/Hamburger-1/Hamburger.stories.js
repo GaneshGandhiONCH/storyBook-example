@@ -2,7 +2,7 @@ import './hamburger.scss';
 // import {Hamburger} from "./Hamburger";
 
 export default {
-  title: 'Components/Hamburger'
+  title: 'Components/Hamburgers/Hamburger-1'
 };
 
 const Template = () => {
@@ -14,7 +14,7 @@ const Template = () => {
    </button>`;
 };
 
-export const Default = Template.bind({});
+export const Hamburger_1 = Template.bind({});
 
 window.addEventListener('load', function () {
   // new Hamburger();

@@ -9,7 +9,7 @@ export default {
       control: { type: 'select' }
     },
     size: {
-      options: ['button-outline--small', 'button-outline--medium', 'button-outline--large'],
+      options: ['button-primary--small', 'button-primary--medium', 'button-primary--large'],
       control: { type: 'select' }
     }
   },
@@ -35,5 +35,5 @@ export const Primary = Template.bind({});
 Primary.args = {
   label: 'Submit',
   tag: 'button',
-  size: 'button-outline--medium'
+  size: 'button-primary--medium'
 };

@@ -2,7 +2,7 @@ import './lang-switcher.scss';
 import {LangSwitcher} from './LangSwitcher';
 
 export default {
-  title: 'Components/LangSwitchers',
+  title: 'Components/LangSwitchers/LangSwitcher-1',
   argTypes: {
     current: { control: 'text' },
     firstLang: { control: 'text' },

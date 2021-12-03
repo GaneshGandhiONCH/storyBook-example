@@ -7,6 +7,10 @@ export default {
     tag: {
       options: ['button', 'input', 'a'],
       control: { type: 'select' }
+    },
+    size: {
+      options: ['button-outline--small', 'button-outline--medium', 'button-outline--large'],
+      control: { type: 'select' }
     }
   }
 };

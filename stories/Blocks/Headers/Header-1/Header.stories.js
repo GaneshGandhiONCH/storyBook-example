@@ -3,7 +3,7 @@ import {MobileMenu} from "./MobileMenu";
 
 
 export default {
-  title: 'Blocks/Headers',
+  title: 'Blocks/Headers/Header-1',
 };
 
 
