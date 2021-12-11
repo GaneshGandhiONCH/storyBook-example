@@ -1,4 +1,3 @@
-import './lang-switcher.scss';
 import {LangSwitcher} from './LangSwitcher';
 
 export default {

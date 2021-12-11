@@ -1,5 +1,3 @@
-@import "../../global/style/style";
-
 .title {
   margin: 0;
   padding: 0;
@@ -18,7 +16,7 @@
 }
 
 .title-h1 {
-  font-size: 4rem;
+  font-size: 2.6rem;
   font-weight: 700;
 
   @media (min-width: $tablet-md ) {

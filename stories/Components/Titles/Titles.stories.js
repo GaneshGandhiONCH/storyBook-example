@@ -1,5 +1,3 @@
-import './titles.scss';
-
 
 export default {
   title: 'Components/Titles',

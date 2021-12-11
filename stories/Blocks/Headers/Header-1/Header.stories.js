@@ -1,11 +1,8 @@
-import './header.scss';
 import {MobileMenu} from "./MobileMenu";
-
 
 export default {
   title: 'Blocks/Headers/Header-1',
 };
-
 
 const Template = () => {
   return `<header-1 class="container header-1" data-header>

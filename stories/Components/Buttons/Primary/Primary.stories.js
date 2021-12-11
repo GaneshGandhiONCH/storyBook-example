@@ -1,4 +1,3 @@
-import './primary.scss';
 
 export default {
   title: 'Components/Buttons/Primary',

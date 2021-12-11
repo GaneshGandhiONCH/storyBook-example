@@ -1,4 +1,3 @@
-import './outline.scss';
 
 export default {
   title: 'Components/Buttons/Outline',

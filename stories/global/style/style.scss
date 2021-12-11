@@ -1,5 +1,36 @@
 //assets
 @import "~normalize-scss";
 
+@import "vars";
 @import "base";
 @import "layout";
+
+
+//============= Components ===============//
+
+// Titles
+@import "stories/Components/Titles/titles";
+
+
+// Buttons
+@import "stories/Components/Buttons/Outline/outline";
+@import "stories/Components/Buttons/Primary/primary";
+
+
+// Hamburgers
+@import "stories/Components/Hamburgers/Hamburger-1/hamburger";
+
+
+// LangSwitchers
+@import "stories/Components/LangSwitchers/LangSwitcher-1/lang-switcher";
+
+
+
+//============= Blocks ===============//
+
+// Headers
+@import "stories/Blocks/Headers/Header-1/header";
+
+
+// Heroes
+@import "stories/Blocks/Heros/Hero-1/hero";
