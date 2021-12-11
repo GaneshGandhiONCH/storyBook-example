@@ -6,7 +6,8 @@ $link-hover-color: #1ea7fd;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
   background-color: #fff;
   box-shadow: 0 1px 26px rgba($link-color, .1);
   position: fixed;
@@ -254,14 +255,12 @@ $link-hover-color: #1ea7fd;
   }
 
   &__button {
-    font-size: 1.8rem;
-    line-height: 1.4;
+    font-size: 1.6rem;
     margin-top: 30px;
 
     @media (min-width: $media-desktop-sm ) {
       margin-left: 60px;
       margin-top: 0;
-      font-size: 2.4rem;
     }
   }
 
@@ -271,7 +270,7 @@ $link-hover-color: #1ea7fd;
 
     @media (min-width: $media-desktop-sm ) {
       margin-left: 40px;
-      margin-top: 0;
+      margin-top: 10px;
       margin-bottom: 0;
     }
 
@@ -302,7 +301,7 @@ $link-hover-color: #1ea7fd;
       }
     }
 
-    .lang-switcher-1__list--active {
+    .lang-switcher-1__list--open {
       @media (min-width: $media-desktop-sm ) {
         pointer-events: initial;
         transform: translateY(10px);

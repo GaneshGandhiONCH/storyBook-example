@@ -2,6 +2,7 @@ $text-color: #212832;
 $link-hover: #1ea7fd;
 
 .lang-switcher-1 {
+  display: inline-block;
   position: relative;
   padding-bottom: 10px;
   margin-top: 10px;
@@ -77,7 +78,7 @@ $link-hover: #1ea7fd;
     opacity: 0;
     transition: opacity .2s ease-in-out, transform .2s ease-in-out;
 
-    .lang-switcher-1-open & {
+    &.lang-switcher-1__list--open {
       pointer-events: initial;
       transform: translateY(0);
       opacity: 1;

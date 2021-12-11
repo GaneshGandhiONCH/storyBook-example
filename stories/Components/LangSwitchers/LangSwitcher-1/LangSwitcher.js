@@ -3,9 +3,7 @@ export function LangSwitcher() {
   const $this = this;
   const switchers = document.querySelectorAll('[data-switcher]');
   if (!switchers.length) return;
-  const currentsLangs = document.querySelectorAll('[data-switcher-current]');
-  const activeListClass = 'lang-switcher-1__list--active';
-  const activeClass = 'lang-switcher-1-open';
+  const activeClass = 'lang-switcher-1__list--open';
 
   // LISTENERS
   document.addEventListener('click', handleOnClickDocument, false);
@@ -48,12 +46,11 @@ export function LangSwitcher() {
 
   $this.toggleLangSwitcherOnTab = () => {
     const activeElement = document.activeElement;
-    const activeElementContainer = activeElement.closest('[data-switcher]');
+    const activeElementContainer = activeElement.closest('[data-switcher-list]');
+    const langList = document.querySelector('[data-switcher-list]');
 
-    if (activeElementContainer) {
-      activeElementContainer.classList.add(activeClass)
-    } else {
-      $this.closeAll();
-    }
+    activeElementContainer
+      ? activeElementContainer.classList.add(activeClass)
+      : langList.classList.remove(activeClass);
   }
 }
