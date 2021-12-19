@@ -17,15 +17,3 @@
     padding-right: calc((100% - 1200px) / 2);
   }
 }
-
-.v-col-12 {
-  width: 100%;
-}
-
-.v-col-6 {
-  width: 100%;
-
-  @media (min-width: $media-tablet-lg ) {
-    width: 50%;
-  }
-}

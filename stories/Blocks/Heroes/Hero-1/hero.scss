@@ -3,9 +3,9 @@
   padding-bottom: 60px;
 
   @media (min-width: $media-tablet-lg ) {
-    display: flex;
-    align-content: center;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
   }
 
   &__title {
