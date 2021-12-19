@@ -3,14 +3,12 @@
   padding-bottom: 60px;
 
   @media (min-width: $media-tablet-lg ) {
-    display: flex;
-    align-content: center;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
   }
 
   &__title {
-    text-align: center;
-
     @media (min-width: $media-tablet-lg ) {
       text-align: left;
       line-height: 1.2;
@@ -22,7 +20,6 @@
     margin-bottom: 0;
     font-size: 1.6rem;
     line-height: 1.6;
-    text-align: center;
     
     @media (min-width: $media-tablet-md ) {
       font-size: 1.8rem;
@@ -30,12 +27,11 @@
 
     @media (min-width: $media-tablet-lg ) {
       text-align: left;
+      max-width: 468px;
     }
   }
 
   &__content {
-    text-align: center;
-
     @media (min-width: $media-tablet-lg ) {
       text-align: left;
       align-self: center;
@@ -44,13 +40,45 @@
 
   &__img {
     display: none;
+
+    @media (min-width: $media-tablet-lg) {
+      display: block;
+      max-height: 500px;
+      object-fit: contain;
+    }
+  }
+
+  &__buttons {
+    margin-top: 20px;
+
+    @media (min-width: $media-tablet-lg ) {
+      margin-top: 40px;
+    }
   }
 
   &__button {
     width: 100%;
 
+    & + & {
+      margin-top: 10px;
+
+      @media (min-width: $media-tablet-md ) {
+        margin-top: 0;
+        margin-left: 20px;
+      }
+    }
+
     @media (min-width: $media-tablet-md ) {
       width: auto;
+      min-width: 170px;
+    }
+  }
+
+  &__open-modal-video {
+    margin-top: 24px;
+
+    @media (min-width: $media-tablet-lg ) {
+      margin-top: 36px;
     }
   }
 }

@@ -7,6 +7,7 @@
   @media (min-width: $media-tablet-md) {
     grid-template-columns: 140px 1fr;
     grid-template-rows: 80px auto;
+    grid-column-gap: 20px;
   }
 
   &__button {
@@ -66,6 +67,7 @@
 
     @media (min-width: $media-tablet-md) {
       font-size: 1.4rem;
+      margin-top: 4px;
     }
   }
 }
