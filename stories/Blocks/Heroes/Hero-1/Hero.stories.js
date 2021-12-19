@@ -1,7 +1,7 @@
 import hero_1 from './hero-images.svg'
 
 export default {
-  title: 'Blocks/Heros/Hero-1',
+  title: 'Blocks/Heroes/Hero-1',
 };
 
 const Template = () => {

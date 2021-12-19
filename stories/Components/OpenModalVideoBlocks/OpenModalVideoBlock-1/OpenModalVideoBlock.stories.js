@@ -7,9 +7,9 @@ export default {
 };
 
 const Template = ({ title, tip }) => {
-  return `<div class="hero-2__open-modal-video open-modal-video">
+  return `<div class="open-modal-video">
         <button class="open-modal-video__button" type="button" aria-label="Click to open modal video">
-          <svg width="140" height="81" viewBox="0 0 140 81" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_83_1029)"> <rect y="0.85083" width="140" height="80" rx="4" fill="#0B132A"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M50 40.8508C50 29.8108 58.96 20.8508 70 20.8508C81.04 20.8508 90 29.8108 90 40.8508C90 51.8908 81.04 60.8508 70 60.8508C58.96 60.8508 50 51.8908 50 40.8508ZM78 40.8508L66 31.8508V49.8508L78 40.8508Z" fill="white"/> </g> <defs> <clipPath id="clip0_83_1029"> <rect width="140" height="80" fill="white" transform="translate(0 0.85083)"/> </clipPath> </defs> </svg>
+          <svg class="open-modal-video__button-icon" width="43" height="40" viewBox="0 0 43 40" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0.205933 20C0.205933 8.96 9.62711 0 21.2353 0C32.8436 0 42.2648 8.96 42.2648 20C42.2648 31.04 32.8436 40 21.2353 40C9.62711 40 0.205933 31.04 0.205933 20ZM29.647 20L17.0293 11V29L29.647 20Z" fill="white"/> </svg>        
         </button>
         <div class="open-modal-video__content">
           <p class="open-modal-video__title">
