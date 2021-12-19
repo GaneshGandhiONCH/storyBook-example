@@ -1,4 +1,4 @@
-.hero-1 {
+.hero-2 {
   padding-top: 60px;
   padding-bottom: 60px;
 
@@ -43,39 +43,14 @@
   }
 
   &__img {
-
-    &--mobile {
-      display: block;
-      margin-top: 28px;
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-
-      @media (min-width: $media-tablet-lg ) {
-        display: none;
-      }
-    }
-
-    &--desktop {
-      display: none;
-
-      @media (min-width: $media-tablet-lg ) {
-        display: block;
-      }
-    }
+    display: none;
   }
 
   &__button {
-    margin-top: 48px;
     width: 100%;
 
     @media (min-width: $media-tablet-md ) {
       width: auto;
-      padding: 22px 100px;
-    }
-
-    @media (min-width: $media-tablet-lg ) {
-      padding: 22px 100px;
     }
   }
 }
