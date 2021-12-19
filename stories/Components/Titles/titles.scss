@@ -19,47 +19,47 @@
   font-size: 2.6rem;
   font-weight: 700;
 
-  @media (min-width: $tablet-md ) {
-    font-size: 6rem;
+  @media (min-width: $media-tablet-md ) {
+    font-size: 5rem;
   }
 
-  @media (min-width: $desktop-md ) {
-    font-size: 12rem;
+  @media (min-width: $media-desktop-md ) {
+    font-size: 8rem;
   }
 }
 
 .title-h2 {
-  font-size: 3rem;
+  font-size: 2.4rem;
 
-  @media (min-width: $tablet-md ) {
-    font-size: 5rem;
+  @media (min-width: $media-tablet-md ) {
+    font-size: 4rem;
   }
 
-  @media (min-width: $desktop-md ) {
-    font-size: 10rem;
+  @media (min-width: $media-desktop-md ) {
+    font-size: 6rem;
   }
 }
 
 .title-h3 {
   font-size: 2.4rem;
 
-  @media (min-width: $tablet-md ) {
+  @media (min-width: $media-tablet-md ) {
     font-size: 3.4rem;
   }
 
-  @media (min-width: $desktop-md ) {
-    font-size: 6rem;
+  @media (min-width: $media-desktop-md ) {
+    font-size: 5rem;
   }
 }
 
 .title-h4 {
   font-size: 2rem;
 
-  @media (min-width: $tablet-md ) {
+  @media (min-width: $media-tablet-md ) {
     font-size: 2.4rem;
   }
 
-  @media (min-width: $desktop-md ) {
+  @media (min-width: $media-desktop-md ) {
     font-size: 4rem;
   }
 }
@@ -67,11 +67,11 @@
 .title-h5 {
   font-size: 1.8rem;
 
-  @media (min-width: $tablet-md ) {
+  @media (min-width: $media-tablet-md ) {
     font-size: 2.2rem;
   }
 
-  @media (min-width: $desktop-md ) {
+  @media (min-width: $media-desktop-md ) {
     font-size: 3rem;
   }
 }
@@ -79,11 +79,11 @@
 .title-h6 {
   font-size: 1.6rem;
 
-  @media (min-width: $tablet-md ) {
+  @media (min-width: $media-tablet-md ) {
     font-size: 2rem;
   }
 
-  @media (min-width: $desktop-md ) {
+  @media (min-width: $media-desktop-md ) {
     font-size: 2.4rem;
   }
 }
