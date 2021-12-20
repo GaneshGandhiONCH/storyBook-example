@@ -23,7 +23,7 @@ const Template = ({title, text, buttonText}) => {
     </div>
     <img src="${hero_1}"
       alt="Some peoples with phone"
-      class="hero-1__img hero-1__img--desktop v-col-6"
+      class="hero-1__img hero-1__img--desktop"
       loading="lazy"
     >
   </section>`;

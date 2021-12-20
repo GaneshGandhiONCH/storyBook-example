@@ -33,7 +33,7 @@ const Template = ({title, text, buttonText1, buttonText2, videoName, videoTip}) 
     </div>
     <img src="${heroImage}"
       alt="Running man"
-      class="hero-2__img hero-2__img"
+      class="hero-2__img"
       loading="lazy"
     >
   </section>`;
