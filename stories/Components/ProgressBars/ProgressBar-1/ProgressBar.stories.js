@@ -11,9 +11,7 @@ const Template = ({ title, percent }) => {
               <span class="progress-bar-1__title">
                   ${title}
               </span>
-              <div class="progress-bar-1__default-line">
-                  <div class="progress-bar-1__line"></div>
-              </div>
+              <div class="progress-bar-1__line"></div>
               <div class="progress-bar-1__percent">${percent}</div>
           </div>`;
 };
