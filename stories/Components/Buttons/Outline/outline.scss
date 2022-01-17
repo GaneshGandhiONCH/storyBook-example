@@ -8,7 +8,7 @@ $primary-focus: #98d3ff;
   text-align: center;
   padding: 1.6rem 3.4rem;
   width: auto;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 600;
   letter-spacing: .1rem;
   cursor: pointer;
@@ -41,15 +41,18 @@ $primary-focus: #98d3ff;
 
   &--medium {
     padding: 1.6rem 4rem;
+    font-size: 1.8rem;
   }
 
   &--large {
     padding: 2rem 6rem;
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 
-  &[disable] {
-    opacity: .5;
+  &[disabled] {
+    color: rgba(0, 0, 0, 0.40);
+    background-color: rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.12);
     pointer-events: none;
     outline: none;
   }
