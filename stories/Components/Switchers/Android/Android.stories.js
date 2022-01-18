@@ -17,7 +17,7 @@ const Template = ({ label, checked, disabled }) => {
 
 export const Android = Template.bind({});
 Android.args = {
-  label: 'Android',
+  label: 'Android Switcher',
   checked: true,
   disabled: false
 };

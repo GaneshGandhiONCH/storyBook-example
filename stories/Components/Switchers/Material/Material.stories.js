@@ -17,7 +17,7 @@ const Template = ({ label, checked, disabled }) => {
 
 export const Material = Template.bind({});
 Material.args = {
-  label: 'Switcher',
+  label: 'Material Switcher',
   checked: true,
   disabled: false
 };
