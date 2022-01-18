@@ -10,7 +10,7 @@ $primeColor: #2196F3;
   &:hover &__input:not(:disabled) {
     opacity: 0.08;
 
-    &:focus {
+    &:focus-visible {
       opacity: 0.16;
     }
   }
@@ -58,7 +58,7 @@ $primeColor: #2196F3;
       }
     }
 
-    &:focus {
+    &:focus-visible {
       opacity: 0.12;
     }
 

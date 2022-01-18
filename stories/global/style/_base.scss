@@ -9,8 +9,10 @@ body {
   margin: 0;
 }
 
+input[type="checkbox"],
 a,
 button,
+label,
 img {
   user-select: none;
   touch-action: pan-y;
