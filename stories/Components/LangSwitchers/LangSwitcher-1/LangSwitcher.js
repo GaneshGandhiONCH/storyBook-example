@@ -40,7 +40,7 @@ export function LangSwitcher() {
   // FUNCTIONS & METHODS
   $this.closeAll = () => {
     switchers.forEach(switcher => {
-      switcher.classList.remove(activeClass);
+      switcher.querySelector('[data-switcher-list]').classList.remove(activeClass);
     })
   }
 
