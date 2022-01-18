@@ -8,9 +8,9 @@ export default {
 };
 
 const Template = ({ label, checked, disabled }) => {
-  return `<label class="pure-material-switch">
-            <input class="pure-material-switch__input" type="checkbox" ${checked ? 'checked' : ''} ${disabled ? 'disabled' : ''}>
-            <span class="pure-material-switch__label">${label}</span>
+  return `<label class="material-switch">
+            <input class="material-switch__input" type="checkbox" ${checked ? 'checked' : ''} ${disabled ? 'disabled' : ''}>
+            <span class="material-switch__label">${label}</span>
           </label>`;
 };
 
