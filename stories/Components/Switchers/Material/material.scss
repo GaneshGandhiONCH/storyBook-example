@@ -1,121 +1,81 @@
 $primeColor: #2196F3;
+$gray: #c3c3c3;
 
 .material-switch {
-  z-index: 0;
-  position: relative;
-  display: inline-block;
-  font-size: 1.6rem;
-  line-height: 1.5;
-
-  &:hover &__input:not(:disabled) {
-    opacity: 0.08;
-
-    &:focus-visible {
-      opacity: 0.16;
-    }
-  }
+  display: inline-flex;
+  align-items: center;
 
   &__input {
     appearance: none;
-    z-index: -1;
-    position: absolute;
-    right: 6px;
-    top: -8px;
-    display: block;
-    margin: 0;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    background-color: rgba(0, 0, 0, 0.38);
-    outline: none;
     opacity: 0;
-    transform: scale(1);
-    pointer-events: none;
-    transition: opacity 0.3s 0.1s, transform 0.2s 0.1s;
+    position: absolute;
+    z-index: -100;
+
+    &:focus-visible ~ .material-switch__toggle:after {
+      outline: 8px solid rgba($gray, .35);
+    }
+
+    &:checked:focus-visible ~ .material-switch__toggle:after {
+      outline: 8px solid rgba($primeColor, .15);
+    }
+
+    &:checked ~ .material-switch__toggle {
+      background-color: rgba($primeColor, .65);
+
+      &:after {
+        background-color: $primeColor;
+        transform: translateX(1.8rem) translateY(-50%);
+      }
+    }
 
     &:disabled {
-      opacity: 0;
-      pointer-events: none;
 
-      & + .material-switch__label {
-        color: rgb(0, 0, 0);
-        opacity: 0.38;
-        cursor: default;
-
-        &::before {
-          background-color: rgba(0, 0, 0, 0.38);
-        }
-      }
-    }
-
-    &:active:not(:disabled) {
-      opacity: 1;
-      transform: scale(0);
-      transition: transform 0s, opacity 0s;
-
-      & + .material-switch__label::before {
-        background-color: rgba($primeColor, 0.6);
-      }
-    }
-
-    &:focus-visible {
-      opacity: 0.12;
-    }
-
-    &:checked {
-      right: -10px;
-      background-color: $primeColor;
-
-      & + .material-switch__label::before {
-        background-color: rgba($primeColor, 0.6);
+      & ~ .material-switch__toggle {
+        opacity: .35;
+        pointer-events: none;
       }
 
-      & + .material-switch__label::after {
-        background-color: $primeColor;
-        transform: translateX(16px);
-      }
-
-      &:active + &__label::before {
-        background-color: rgba(0, 0, 0, 0.38);
-      }
-
-      &:disabled + .material-switch__label::before {
-        background-color: rgba($primeColor, 0.6);
+      & ~ .material-switch__label {
+        opacity: .35;
+        pointer-events: none;
       }
     }
   }
 
   &__label {
-    display: inline-block;
-    width: 100%;
+    margin: 0 6px;
     cursor: pointer;
+    transition: color .2s ease-in-out;
 
-    /* Track */
-    &::before {
-      content: "";
-      float: right;
-      display: inline-block;
-      margin: 5px 0 5px 10px;
-      border-radius: 7px;
-      width: 36px;
-      height: 14px;
-      background-color: rgba(0, 0, 0, 0.38);
-      vertical-align: top;
-      transition: background-color 0.2s, opacity 0.2s;
+    &:hover {
+      color: $primeColor;
     }
+  }
 
-    /* Thumb */
-    &::after {
-      content: "";
+  &__toggle {
+    display: block;
+    width: 3.8rem;
+    height: 1.4rem;
+    background-color: $gray;
+    border-radius: 2rem;
+    user-select: none;
+    position: relative;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+
+    &:after {
+      content: '';
+      display: block;
+      height: 2rem;
+      width: 2rem;
       position: absolute;
-      top: 2px;
-      right: 16px;
-      border-radius: 50%;
-      width: 20px;
-      height: 20px;
-      background-color: rgb(255, 255, 255);
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-color: #fff;
+      border-radius: 2rem;
       box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-      transition: background-color 0.2s, transform 0.2s;
+      transition: transform .3s ease-in-out, background-color .3s ease-in-out;
     }
   }
 }

@@ -2,7 +2,7 @@ $primeColor: #2196F3;
 $gray: #f0f0f0;
 
 .android-switch {
-  display: flex;
+  display: inline-flex;
   align-items: center;
 
   &__input {

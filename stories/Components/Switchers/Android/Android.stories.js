@@ -19,5 +19,5 @@ export const Android = Template.bind({});
 Android.args = {
   label: 'Android',
   checked: true,
-  disabled: true
+  disabled: false
 };
