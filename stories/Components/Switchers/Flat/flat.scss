@@ -12,11 +12,11 @@ $gray: #c3c3c3;
     z-index: -100;
 
     &:checked:focus-visible ~ .flat-switch__toggle {
-      outline: 6px solid rgba($primeColor, .15);
+      outline: 4px solid rgba($primeColor, .15);
     }
 
     &:focus-visible ~ .flat-switch__toggle {
-      outline: 6px solid rgba($gray, .35);
+      outline: 4px solid rgba($gray, .35);
     }
 
     &:checked ~ .flat-switch__toggle {
