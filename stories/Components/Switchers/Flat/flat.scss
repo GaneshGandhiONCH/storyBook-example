@@ -1,5 +1,5 @@
-$primeColor: #2196F3;
-$gray: #c3c3c3;
+$checkedColor: #2196F3;
+$uncheckedColor: #c3c3c3;
 
 .flat-switch {
   display: inline-flex;
@@ -12,19 +12,19 @@ $gray: #c3c3c3;
     z-index: -100;
 
     &:checked:focus-visible ~ .flat-switch__toggle {
-      outline: 4px solid rgba($primeColor, .15);
+      outline: 4px solid rgba($checkedColor, .15);
     }
 
     &:focus-visible ~ .flat-switch__toggle {
-      outline: 4px solid rgba($gray, .35);
+      outline: 4px solid rgba($uncheckedColor, .35);
     }
 
     &:checked ~ .flat-switch__toggle {
-      border-color: $primeColor;
+      border-color: $checkedColor;
 
       &:after {
         transform: translateX(1.6rem);
-        background-color: $primeColor;
+        background-color: $checkedColor;
       }
     }
 
@@ -48,7 +48,7 @@ $gray: #c3c3c3;
     transition: color .2s ease-in-out;
 
     &:hover {
-      color: $primeColor;
+      color: $checkedColor;
     }
   }
 
@@ -56,7 +56,7 @@ $gray: #c3c3c3;
     display: block;
     width: 4.4rem;
     height: 2.2rem;
-    border: 2px solid $gray;
+    border: 2px solid $uncheckedColor;
     border-radius: 2rem;
     user-select: none;
     position: relative;
@@ -71,7 +71,7 @@ $gray: #c3c3c3;
       position: absolute;
       top: .2rem;
       left: 2px;
-      background-color: $gray;
+      background-color: $uncheckedColor;
       border-radius: 2rem;
       transition: transform .3s ease-in-out, background-color .3s ease-in-out;
     }

@@ -1,5 +1,5 @@
-$primeColor: #2196F3;
-$gray: #f0f0f0;
+$checkedColor: #2196F3;
+$uncheckedColor: #c3c3c3;
 
 .android-switch {
   display: inline-flex;
@@ -11,16 +11,16 @@ $gray: #f0f0f0;
     position: absolute;
     z-index: -100;
 
-    &:checked:focus-visible ~ .android-switch__toggle:after {
-      outline: 10px solid rgba($primeColor, .15);
+    &:checked:focus-visible ~ .android-switch__toggle {
+      outline: 4px solid rgba($checkedColor, .15);
     }
 
-    &:focus-visible ~ .android-switch__toggle:after {
-      outline: 10px solid rgba($gray, .55);
+    &:focus-visible ~ .android-switch__toggle {
+      outline: 4px solid rgba($uncheckedColor, .35);
     }
 
     &:checked ~ .android-switch__toggle {
-      background-color: $primeColor;
+      background-color: $checkedColor;
 
       &:after {
         transform: translateX(2rem);
@@ -47,7 +47,7 @@ $gray: #f0f0f0;
     transition: color .2s ease-in-out;
 
     &:hover {
-      color: $primeColor;
+      color: $checkedColor;
     }
   }
 
@@ -55,7 +55,7 @@ $gray: #f0f0f0;
     display: block;
     width: 4.4rem;
     height: 2.4rem;
-    background-color: $gray;
+    background-color: $uncheckedColor;
     border-radius: 2rem;
     user-select: none;
     position: relative;

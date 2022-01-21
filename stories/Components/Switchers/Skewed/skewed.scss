@@ -1,5 +1,5 @@
-$primeColor: #2196F3;
-$gray: #c3c3c3;
+$checkedColor: #2196F3;
+$uncheckedColor: #c3c3c3;
 
 .skewed-switch {
   display: inline-flex;
@@ -13,17 +13,17 @@ $gray: #c3c3c3;
 
     &:focus-visible {
       & ~ .skewed-switch__toggle {
-        outline: 3px solid rgba($gray, .4);
+        outline: 3px solid rgba($uncheckedColor, .4);
       }
 
       &:checked ~ .skewed-switch__toggle {
-        outline: 3px solid rgba($primeColor, .2);
+        outline: 3px solid rgba($checkedColor, .2);
       }
     }
 
     &:checked {
       & ~ .skewed-switch__toggle {
-        background-color: $primeColor;
+        background-color: $checkedColor;
       }
 
       & ~ .skewed-switch__toggle .skewed-switch__toggle-label {
@@ -56,7 +56,7 @@ $gray: #c3c3c3;
     transition: color .2s ease-in-out;
 
     &:hover {
-      color: $primeColor;
+      color: $checkedColor;
     }
   }
 
@@ -68,7 +68,7 @@ $gray: #c3c3c3;
     transform: skew(-10deg);
     backface-visibility: hidden;
     font-family: sans-serif;
-    background-color: $gray;
+    background-color: $uncheckedColor;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
 
