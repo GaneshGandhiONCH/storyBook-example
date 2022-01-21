@@ -6,17 +6,18 @@ export default {
     labelOff: { control: 'text' },
     checked: { control: 'boolean' },
     disabled: { control: 'boolean' },
+    withLabel: { control: 'boolean' },
   }
 };
 
-const Template = ({ label, labelOn, labelOff, checked, disabled }) => {
+const Template = ({ label, labelOn, labelOff, checked, disabled, withLabel }) => {
   return `<label class="skewed-switch">
             <input class="skewed-switch__input" type="checkbox" ${checked ? 'checked' : ''} ${disabled ? 'disabled' : ''}>
             <span class="skewed-switch__toggle">
               <span class="skewed-switch__toggle-label">${labelOn}</span>
               <span class="skewed-switch__toggle-label">${labelOff}</span>
             </span>   
-            <span class="skewed-switch__label">${label}</span>         
+            ${withLabel ? `<span class="skewed-switch__label">${label}</span>` : ''} 
           </label>`;
 };
 
@@ -26,5 +27,6 @@ Skewed.args = {
   labelOn: 'on',
   labelOff: 'off',
   checked: false,
-  disabled: false
+  disabled: false,
+  withLabel: true,
 };

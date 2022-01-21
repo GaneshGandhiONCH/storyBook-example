@@ -4,14 +4,15 @@ export default {
     label: { control: 'text' },
     checked: { control: 'boolean' },
     disabled: { control: 'boolean' },
+    withLabel: { control: 'boolean' },
   }
 };
 
-const Template = ({ label, checked, disabled }) => {
+const Template = ({ label, checked, disabled, withLabel }) => {
   return `<label class="android-switch">
             <input class="android-switch__input" type="checkbox" ${checked ? 'checked' : ''} ${disabled ? 'disabled' : ''}>
             <span class="android-switch__toggle"></span>
-            <span class="android-switch__label">${label}</span>
+            ${withLabel ? `<span class="android-switch__label">${label}</span>` : '' }            
           </label>`;
 };
 
@@ -19,5 +20,6 @@ export const Android = Template.bind({});
 Android.args = {
   label: 'Android Switcher',
   checked: true,
-  disabled: false
+  disabled: false,
+  withLabel: true,
 };
