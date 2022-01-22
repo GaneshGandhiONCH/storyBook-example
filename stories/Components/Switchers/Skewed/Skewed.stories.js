@@ -12,7 +12,12 @@ export default {
 
 const Template = ({ label, labelOn, labelOff, checked, disabled, withLabel }) => {
   return `<label class="skewed-switch">
-            <input class="skewed-switch__input" type="checkbox" ${checked ? 'checked' : ''} ${disabled ? 'disabled' : ''}>
+            <input class="skewed-switch__input" 
+                   type="checkbox" 
+                   ${checked ? 'checked' : ''} 
+                   ${disabled ? 'disabled' : ''}
+                   name="checkbox-name"
+            >
             <span class="skewed-switch__toggle">
               <span class="skewed-switch__toggle-label">${labelOn}</span>
               <span class="skewed-switch__toggle-label">${labelOff}</span>

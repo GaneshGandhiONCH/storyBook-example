@@ -10,7 +10,12 @@ export default {
 
 const Template = ({ label, checked, disabled, withLabel }) => {
   return `<label class="android-switch">
-            <input class="android-switch__input" type="checkbox" ${checked ? 'checked' : ''} ${disabled ? 'disabled' : ''}>
+            <input class="android-switch__input" 
+                   type="checkbox" 
+                   ${checked ? 'checked' : ''} 
+                   ${disabled ? 'disabled' : ''}
+                   name="checkbox-name"
+            >
             <span class="android-switch__toggle"></span>
             ${withLabel ? `<span class="android-switch__label">${label}</span>` : '' }            
           </label>`;

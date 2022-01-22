@@ -12,7 +12,12 @@ export default {
 
 const Template = ({ label, labelOn, labelOff, checked, disabled, withLabel }) => {
   return `<label class="flip-switch">
-            <input class="flip-switch__input" type="checkbox" ${checked ? 'checked' : ''} ${disabled ? 'disabled' : ''}>
+            <input class="flip-switch__input" 
+                   type="checkbox" 
+                   ${checked ? 'checked' : ''} 
+                   ${disabled ? 'disabled' : ''}
+                   name="checkbox-name"
+            >
             <span class="flip-switch__toggle">
               <span class="flip-switch__toggle-label">${labelOn}</span>
               <span class="flip-switch__toggle-label">${labelOff}</span>
