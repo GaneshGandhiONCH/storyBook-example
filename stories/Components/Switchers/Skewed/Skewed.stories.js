@@ -2,6 +2,7 @@ export default {
   title: 'Components/Switchers/Skewed',
   argTypes: {
     label: { control: 'text' },
+    inputName: { control: 'text' },
     labelOn: { control: 'text' },
     labelOff: { control: 'text' },
     checked: { control: 'boolean' },
@@ -10,13 +11,13 @@ export default {
   }
 };
 
-const Template = ({ label, labelOn, labelOff, checked, disabled, withLabel }) => {
+const Template = ({ label, inputName, labelOn, labelOff, checked, disabled, withLabel }) => {
   return `<label class="skewed-switch">
             <input class="skewed-switch__input" 
                    type="checkbox" 
                    ${checked ? 'checked' : ''} 
                    ${disabled ? 'disabled' : ''}
-                   name="checkbox-name"
+                   name="${inputName}"
             >
             <span class="skewed-switch__toggle">
               <span class="skewed-switch__toggle-label">${labelOn}</span>
@@ -29,6 +30,7 @@ const Template = ({ label, labelOn, labelOff, checked, disabled, withLabel }) =>
 export const Skewed = Template.bind({});
 Skewed.args = {
   label: 'Skewed Switcher',
+  inputName: 'checkbox-name',
   labelOn: 'on',
   labelOff: 'off',
   checked: false,

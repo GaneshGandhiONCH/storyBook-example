@@ -2,6 +2,7 @@ export default {
   title: 'Components/Switchers/Flip',
   argTypes: {
     label: { control: 'text' },
+    inputName: { control: 'text' },
     labelOn: { control: 'text' },
     labelOff: { control: 'text' },
     checked: { control: 'boolean' },
@@ -10,13 +11,13 @@ export default {
   }
 };
 
-const Template = ({ label, labelOn, labelOff, checked, disabled, withLabel }) => {
+const Template = ({ label, inputName, labelOn, labelOff, checked, disabled, withLabel }) => {
   return `<label class="flip-switch">
             <input class="flip-switch__input" 
                    type="checkbox" 
                    ${checked ? 'checked' : ''} 
                    ${disabled ? 'disabled' : ''}
-                   name="checkbox-name"
+                   name="${inputName}"
             >
             <span class="flip-switch__toggle">
               <span class="flip-switch__toggle-label">${labelOn}</span>
@@ -29,6 +30,7 @@ const Template = ({ label, labelOn, labelOff, checked, disabled, withLabel }) =>
 export const Flip = Template.bind({});
 Flip.args = {
   label: 'Flip Switcher',
+  inputName: 'checkbox-name',
   labelOn: 'on',
   labelOff: 'off',
   checked: true,

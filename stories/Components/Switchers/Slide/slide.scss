@@ -62,6 +62,8 @@ $uncheckedColor: #888888;
     }
 
     &:disabled {
+      pointer-events: none;
+
       & ~ .slide-switch__toggle {
         opacity: .6;
         pointer-events: none;
