@@ -21,15 +21,11 @@
     transition: background-color .2s ease-in-out;
 
     &:hover {
-      @media (min-width: $media-desktop-sm) {
-        background-color: rgba(#0B132A, .8);
-      }
+      background-color: rgba(#0B132A, .8);
     }
 
-    &:focus {
-      @media (min-width: $media-desktop-sm) {
-        outline: 4px solid #ACACC1;
-      }
+    &:focus-visible {
+      outline: 4px solid #ACACC1;
     }
 
     &-icon {

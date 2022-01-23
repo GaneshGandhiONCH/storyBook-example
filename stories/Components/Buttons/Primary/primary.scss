@@ -25,7 +25,7 @@ $primary-focus: #98d3ff;
     border-color: $primary-hover;
   }
 
-  &:focus {
+  &:focus-visible {
     outline: 4px solid $primary-focus;
   }
 
