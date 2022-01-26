@@ -3,7 +3,7 @@ export function LangSwitcher() {
   const $this = this;
   const switchers = document.querySelectorAll('[data-switcher]');
   if (!switchers.length) return;
-  const activeClass = 'lang-switcher-1__list--open';
+  const activeClass = 'lang-switcher-v1__list--open';
 
   // LISTENERS
   document.addEventListener('click', handleOnClickDocument, false);

@@ -1,19 +1,19 @@
-export const initTicker = () => {
-  const tickersRight = document.querySelectorAll('[data-ticker-right]');
-  const tickersLeft = document.querySelectorAll('[data-ticker-left]');
+export const initTickerV1 = () => {
+  const tickersRight = document.querySelectorAll('[data-ticker-v1-right]');
+  const tickersLeft = document.querySelectorAll('[data-ticker-v1-left]');
   const DURATION = 40000;
 
   tickersRight.forEach(ticker => {
-    animateTicker(ticker, DURATION, 'to_right');
+    animateTickerV1(ticker, DURATION, 'to_right');
   })
 
   tickersLeft.forEach(ticker => {
-    animateTicker(ticker, DURATION);
+    animateTickerV1(ticker, DURATION);
   })
 }
 
-function animateTicker(el, duration, direction = 'to_left') {
-  const innerEl = el.querySelector('[data-ticker-inner]');
+function animateTickerV1(el, duration, direction = 'to_left') {
+  const innerEl = el.querySelector('[data-ticker-v1-inner]');
   const innerWidth = innerEl.offsetWidth;
   const cloneEl = innerEl.cloneNode(true);
 

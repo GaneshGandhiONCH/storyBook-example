@@ -4,7 +4,7 @@ export function Hamburger() {
   // VARS
   const $this = this;
   const hamburger = document.querySelector('[data-hamburger]');
-  const activeClass = 'hamburger-1--active';
+  const activeClass = 'hamburger-v1--active';
 
   // LISTENERS
   hamburger?.addEventListener('click', handleOnClickHamburger, false)

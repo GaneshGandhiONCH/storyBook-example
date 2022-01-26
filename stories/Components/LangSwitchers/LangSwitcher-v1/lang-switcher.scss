@@ -1,20 +1,20 @@
 $text-color: #212832;
 $link-hover: #1ea7fd;
 
-.lang-switcher-1 {
+.lang-switcher-v1 {
   display: inline-block;
   position: relative;
   padding-bottom: 10px;
   margin-top: 10px;
 
   &:hover {
-    .lang-switcher-1__list {
+    .lang-switcher-v1__list {
       pointer-events: initial;
       transform: translateY(0);
       opacity: 1;
     }
 
-    .lang-switcher-1__current-icon {
+    .lang-switcher-v1__current-icon {
       transform: rotateX(180deg);
     }
   }
@@ -78,7 +78,7 @@ $link-hover: #1ea7fd;
     opacity: 0;
     transition: opacity .2s ease-in-out, transform .2s ease-in-out;
 
-    &.lang-switcher-1__list--open {
+    &.lang-switcher-v1__list--open {
       pointer-events: initial;
       transform: translateY(0);
       opacity: 1;

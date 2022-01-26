@@ -1,6 +1,6 @@
 $text-color: #212832;
 
-.hamburger-1 {
+.hamburger-v1 {
   cursor: pointer;
   border: 0;
   background-color: transparent;
@@ -19,7 +19,7 @@ $text-color: #212832;
       transform: translateY(-5px);
       transition: transform .2s ease-in-out .2s, opacity .2s ease-in-out .2s;
 
-      .hamburger-1--active & {
+      .hamburger-v1--active & {
         opacity: 0;
         transform: translateY(6px);
         transition: transform .2s ease-in-out, opacity .2s ease-in-out;
@@ -30,7 +30,7 @@ $text-color: #212832;
       transform: translateY(2px);
       transition: transform .2s ease-in-out;
 
-      .hamburger-1--active & {
+      .hamburger-v1--active & {
         transform: rotate(-45deg) translateY(3px);
         transition: transform .2s ease-in-out .2s;
       }
@@ -40,7 +40,7 @@ $text-color: #212832;
       transform: translateY(-2px);
       transition: transform .2s ease-in-out;
 
-      .hamburger-1--active & {
+      .hamburger-v1--active & {
         transform: rotate(45deg) translateY(-3px);
         transition: transform .2s ease-in-out .2s;
       }
@@ -50,7 +50,7 @@ $text-color: #212832;
       transform: translateY(5px);
       transition: transform .2s ease-in-out .2s, opacity .2s ease-in-out .2s;
 
-      .hamburger-1--active & {
+      .hamburger-v1--active & {
         transform: translateY(-6px);
         opacity: 0;
         transition: transform .2s ease-in-out, opacity .2s ease-in-out;

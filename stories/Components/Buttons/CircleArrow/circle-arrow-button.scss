@@ -2,6 +2,7 @@ $primary: #1ea7fd;
 $primary-hover: #0495f3;
 $primary-active: #0891ea;
 $primary-focus: #98d3ff;
+$animationDuration: .3s ease-in-out;
 
 .circle-arrow-button {
   position: relative;
@@ -10,15 +11,40 @@ $primary-focus: #98d3ff;
   justify-content: center;
   border: 0;
   text-decoration: none;
-  background-color: #eee;
+  background-color: transparent;
   padding: 0 20px 0 50px;
   width: auto;
   height: 40px;
 
   &:hover {
-
     .circle-arrow-button__circle {
       width: 100%;
+    }
+
+    .circle-arrow-button__text {
+      color: #fff;
+    }
+
+    .circle-arrow-button__icon-arrow {
+      transform: translateX(8px);
+
+      &::before {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &:focus-visible {
+    outline: 0;
+
+    .circle-arrow-button__circle {
+      outline: 4px solid $primary-focus;
+    }
+  }
+
+  &:active {
+    .circle-arrow-button__circle {
+      background-color: $primary-active;
     }
   }
 
@@ -30,18 +56,18 @@ $primary-focus: #98d3ff;
     width: 40px;
     background-color: $primary;
     border-radius: 40px;
-    transition: width .4s ease-in-out;
+    transition: width $animationDuration, background-color $animationDuration;
   }
 
   &__icon-arrow {
     box-sizing: border-box;
     display: block;
-    transform: scale(1);
     width: 22px;
     height: 22px;
     position: absolute;
     top: 9px;
     left: 4px;
+    transition: transform $animationDuration;
 
     &::after,
     &::before {
@@ -67,7 +93,13 @@ $primary-focus: #98d3ff;
       background-color: #fff;
       transform: scale(0);
       transform-origin: left;
+      transition: transform $animationDuration;
     }
   }
 
+  &__text {
+    position: relative;
+    z-index: 2;
+    transition: color $animationDuration;
+  }
 }

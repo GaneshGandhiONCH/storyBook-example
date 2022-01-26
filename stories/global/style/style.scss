@@ -10,10 +10,6 @@
 
 //============= Components ===============//
 
-// Titles
-@import "stories/Components/Titles/titles";
-
-
 // Buttons
 @import "stories/Components/Buttons/Outline/outline";
 @import "stories/Components/Buttons/Primary/primary";
@@ -31,37 +27,16 @@
 
 
 // Hamburgers
-@import "stories/Components/Hamburgers/Hamburger-1/hamburger";
+@import "stories/Components/Hamburgers/Hamburger-v1/hamburger";
 
 
 // LangSwitchers
-@import "stories/Components/LangSwitchers/LangSwitcher-1/lang-switcher";
-
-
-// OpenModalVideoBlocks
-@import "stories/Components/OpenModalVideoBlocks/OpenModalVideoBlock-1/open-modal-video-block";
-
-
-// ReviewCards
-@import "stories/Components/Cards/ReviewCards/ReviewCard-1/reviewCard";
+@import "stories/Components/LangSwitchers/LangSwitcher-v1/lang-switcher";
 
 
 // Ticker
-@import "stories/Components/Ticker/ticker";
+@import "../../Components/Tickers/Ticker/ticker";
 
-
-
-// ProgressBars
-@import "stories/Components/ProgressBars/ProgressBar-1/progress-bar";
 
 
 //============= Blocks ===============//
-
-// Headers
-@import "stories/Blocks/Headers/Header-1/header";
-
-
-// Heroes
-@import "stories/Blocks/Heroes/Hero-1/hero";
-@import "stories/Blocks/Heroes/Hero-2/hero";
-@import "stories/Blocks/Heroes/Hero-3/hero";
