@@ -1,0 +1,90 @@
+$checkedColor: #2196F3;
+$uncheckedColor: #c3c3c3;
+
+.slide-small-switch {
+  display: inline-flex;
+  align-items: center;
+
+  &__input {
+    appearance: none;
+    opacity: 0;
+    position: absolute;
+    z-index: -100;
+
+    &:checked:focus-visible ~ .slide-small-switch__toggle {
+      outline: 4px solid rgba($checkedColor, .15);
+    }
+
+    &:focus-visible ~ .slide-small-switch__toggle {
+      outline: 4px solid rgba($uncheckedColor, .35);
+    }
+
+    &:checked ~ .slide-small-switch__toggle {
+      background-color: $checkedColor;
+
+      &:after {
+        transform: translateX(100%);
+      }
+    }
+
+    &:disabled {
+
+      & ~ .slide-small-switch__toggle {
+        opacity: .35;
+        pointer-events: none;
+      }
+
+      & ~ .slide-small-switch__label {
+        opacity: .35;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__label {
+    margin: 0 6px;
+    cursor: pointer;
+    transition: color .2s ease-in-out;
+
+    &:hover {
+      color: $checkedColor;
+    }
+  }
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 7rem;
+    height: 2.6rem;
+    padding: 2px;
+    background-color: $uncheckedColor;
+    user-select: none;
+    position: relative;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+
+    &:after {
+      content: '';
+      display: block;
+      height: 2.2rem;
+      width: calc(50% - 2px);
+      position: absolute;
+      top: .2rem;
+      left: 2px;
+      background-color: #fff;
+      transition: transform .3s ease-in-out;
+    }
+
+    &-label {
+      flex: 1 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #FFF;
+    }
+  }
+}

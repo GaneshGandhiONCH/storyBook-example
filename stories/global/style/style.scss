@@ -1,4 +1,4 @@
-//assets
+// Assets
 @import "~normalize-scss";
 
 
@@ -19,6 +19,16 @@
 @import "stories/Components/Buttons/Primary/primary";
 
 
+// Switchers
+@import "stories/Components/Switchers/Material/material";
+@import "stories/Components/Switchers/Android/android";
+@import "stories/Components/Switchers/Flat/flat";
+@import "stories/Components/Switchers/Skewed/skewed";
+@import "stories/Components/Switchers/Flip/flip";
+@import "stories/Components/Switchers/Slide/slide";
+@import "stories/Components/Switchers/Toggle/toggle";
+
+
 // Hamburgers
 @import "stories/Components/Hamburgers/Hamburger-1/hamburger";
 
@@ -33,6 +43,11 @@
 
 // ReviewCards
 @import "stories/Components/Cards/ReviewCards/ReviewCard-1/reviewCard";
+
+
+// Ticker
+@import "stories/Components/Ticker/ticker";
+
 
 
 // ProgressBars

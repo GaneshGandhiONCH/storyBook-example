@@ -4,13 +4,24 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+  font-family: 'Open Sans', sans-serif;
+}
+
 body {
   padding: 0;
   margin: 0;
+  font-size: 1.6rem;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.2;
 }
 
+input[type="checkbox"],
 a,
 button,
+label,
 img {
   user-select: none;
   touch-action: pan-y;

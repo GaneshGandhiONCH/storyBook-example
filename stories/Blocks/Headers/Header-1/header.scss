@@ -27,7 +27,7 @@ $link-hover-color: #1ea7fd;
       width: 100px;
       height: 34px;
 
-      &:focus {
+      &:focus-visible {
         outline: 1px dashed $link-hover-color;
       }
     }
@@ -213,7 +213,7 @@ $link-hover-color: #1ea7fd;
         }
       }
 
-      &:focus {
+      &:focus-visible {
         outline: 1px dashed $link-hover-color;
       }
     }

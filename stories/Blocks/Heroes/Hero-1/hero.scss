@@ -49,6 +49,7 @@
       margin-top: 28px;
       width: 100%;
       height: auto;
+      max-height: 300px;
       object-fit: contain;
 
       @media (min-width: $media-tablet-lg ) {
@@ -75,7 +76,7 @@
     }
 
     @media (min-width: $media-tablet-lg ) {
-      padding: 22px 100px;
+      padding: 16px 40px;
     }
   }
 }

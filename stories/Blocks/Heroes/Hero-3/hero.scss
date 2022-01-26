@@ -38,10 +38,6 @@ $red: #FD665E;
       width: calc((100% / 3) * 2);
       margin-top: 0;
     }
-
-    @media (min-width: $media-desktop-md) {
-      height: 480px;
-    }
   }
 
   &__content {

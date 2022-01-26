@@ -35,7 +35,7 @@ $link-hover: #1ea7fd;
       stroke: $link-hover;
     }
 
-    &:focus {
+    &:focus-visible {
       outline: 1px dashed $link-hover;
     }
 
@@ -105,7 +105,7 @@ $link-hover: #1ea7fd;
       color: $link-hover;
     }
 
-    &:focus {
+    &:focus-visible {
       outline: 1px dashed $link-hover;
     }
 
