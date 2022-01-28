@@ -3,7 +3,7 @@ $primary-hover: #0495f3;
 $primary-active: #0891ea;
 $primary-focus: #98d3ff;
 
-.button-outline {
+.button-v2 {
   display: inline-block;
   text-align: center;
   width: auto;
@@ -14,7 +14,7 @@ $primary-focus: #98d3ff;
   line-height: 1;
   color: $primary;
   background-color: #fff;
-  border: 1px solid $primary;
+  border: 2px solid $primary;
   border-radius: 5px;
   text-decoration: none;
   transition: background-color .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out;
@@ -30,6 +30,7 @@ $primary-focus: #98d3ff;
   }
 
   &:active {
+    color: #fff;
     background-color: $primary-active;
     border-color: $primary-active;
   }
@@ -52,7 +53,7 @@ $primary-focus: #98d3ff;
   &[disabled] {
     color: rgba(0, 0, 0, 0.40);
     background-color: rgba(0, 0, 0, 0.12);
-    border: 1px solid rgba(0, 0, 0, 0.12);
+    border: 2px solid rgba(0, 0, 0, 0.12);
     pointer-events: none;
     outline: none;
   }

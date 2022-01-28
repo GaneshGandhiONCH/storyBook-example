@@ -5,7 +5,7 @@ module.exports = {
   ],
   "addons": [
     "@storybook/addon-links",
-    "@storybook/addon-essentials",
+    '@storybook/addon-controls',
     '@whitespace/storybook-addon-html',
     '@storybook/preset-scss'
   ]

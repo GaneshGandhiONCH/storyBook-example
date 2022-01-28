@@ -4,7 +4,7 @@ $primary-active: #0891ea;
 $primary-focus: #98d3ff;
 $animationDuration: .3s ease-in-out;
 
-.circle-arrow-button {
+.button-v3 {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -17,15 +17,15 @@ $animationDuration: .3s ease-in-out;
   height: 40px;
 
   &:hover {
-    .circle-arrow-button__circle {
+    .button-v3__circle {
       width: 100%;
     }
 
-    .circle-arrow-button__text {
+    .button-v3__text {
       color: #fff;
     }
 
-    .circle-arrow-button__icon-arrow {
+    .button-v3__icon-arrow {
       transform: translateX(8px);
 
       &::before {
@@ -37,13 +37,13 @@ $animationDuration: .3s ease-in-out;
   &:focus-visible {
     outline: 0;
 
-    .circle-arrow-button__circle {
+    .button-v3__circle {
       outline: 4px solid $primary-focus;
     }
   }
 
   &:active {
-    .circle-arrow-button__circle {
+    .button-v3__circle {
       background-color: $primary-active;
     }
   }
@@ -98,8 +98,11 @@ $animationDuration: .3s ease-in-out;
   }
 
   &__text {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #222222;
     position: relative;
     z-index: 2;
-    transition: color $animationDuration;
+    transition: color .2s ease-in-out;
   }
 }

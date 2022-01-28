@@ -14,7 +14,6 @@
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@storybook/addon-actions": "^6.4.9",
-    "@storybook/addon-essentials": "^6.4.9",
     "@storybook/addon-links": "^6.4.9",
     "@storybook/html": "^6.4.9",
     "@storybook/preset-scss": "^1.0.3",
@@ -26,6 +25,7 @@
     "style-loader": "2.0.0"
   },
   "dependencies": {
+    "@storybook/addon-controls": "^6.4.14",
     "animejs": "^3.2.1",
     "normalize-scss": "^7.0.1"
   }
