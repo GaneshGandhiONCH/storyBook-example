@@ -1,13 +1,8 @@
-
 export default {
   title: 'Components/Buttons',
-  component: 'Button',
+  component: 'Button_version_2',
   argTypes: {
     label: { control: 'text' },
-    tag: {
-      options: ['button', 'input', 'a'],
-      control: { type: 'select' }
-    },
     size: {
       options: ['button-v2--small', 'button-v2--medium', 'button-v2--large'],
       control: { type: 'select' }
@@ -15,25 +10,12 @@ export default {
   }
 };
 
-const Template = ({ label, tag, size }) => {
-  let button;
-
-  if (tag === 'input') {
-    button = `<input type="submit" class="button-v2 ${size}" placeholder="${label}" />`;
-  }
-  else if (tag === 'a') {
-    button = `<a href="#!" class="button-v2 ${size}">${label}</a>`;
-  }
-  else if (tag === 'button') {
-    button = `<button type="button" class="button-v2 ${size}">${label}</button>`;
-  }
-
-  return button;
+const Template = ({ label, size }) => {
+  return `<button type="button" class="button-v2 ${size ? size : 'button-v2--medium'}">${label}</button>`;
 };
 
 export const Button_version_2 = Template.bind({});
 Button_version_2.args = {
-  label: 'Submit',
-  tag: 'button',
+  label: 'Button',
   size: 'button-v2--medium'
 };
