@@ -8,8 +8,6 @@ export function LangSwitcher() {
   // LISTENERS
   document.addEventListener('click', handleOnClickDocument, false);
 
-  document.addEventListener('scroll', handleOnScroll, false);
-
   document.addEventListener('keydown', handleOnKeyDown);
 
 
@@ -18,10 +16,6 @@ export function LangSwitcher() {
       if(!e.target.closest('[data-switcher]')) {
         $this.closeAll();
       }
-  }
-
-  function handleOnScroll() {
-    $this.closeAll();
   }
 
   function handleOnKeyDown(e) {
