@@ -10,7 +10,7 @@ export default {
   },
 };
 
-document.addEventListener('DOMContentLoaded', function (e) {
+document.addEventListener('DOMContentLoaded', function () {
   setTimeout(() => {
     new LangSwitcher();
   }, 0)
