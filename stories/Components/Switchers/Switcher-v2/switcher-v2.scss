@@ -47,8 +47,10 @@ $uncheckedColor: #c3c3c3;
     cursor: pointer;
     transition: color .2s ease-in-out;
 
-    &:hover {
-      color: $checkedColor;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $checkedColor;
+      }
     }
   }
 

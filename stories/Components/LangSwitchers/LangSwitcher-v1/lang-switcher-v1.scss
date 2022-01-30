@@ -7,15 +7,17 @@ $link-hover: #1ea7fd;
   padding-bottom: 10px;
   margin-top: 10px;
 
-  &:hover {
-    .lang-switcher-v1__list {
-      pointer-events: initial;
-      transform: translateY(0);
-      opacity: 1;
-    }
+  @media (any-hover: hover) {
+    &:hover {
+      .lang-switcher-v1__list {
+        pointer-events: initial;
+        transform: translateY(0);
+        opacity: 1;
+      }
 
-    .lang-switcher-v1__current-icon {
-      transform: rotateX(180deg);
+      .lang-switcher-v1__current-icon {
+        transform: rotateX(180deg);
+      }
     }
   }
 
@@ -27,12 +29,14 @@ $link-hover: #1ea7fd;
     background-color: transparent;
     cursor: pointer;
 
-    &:hover &-name {
-      color: $link-hover;
-    }
+    @media (any-hover: hover) {
+      &:hover &-name {
+        color: $link-hover;
+      }
 
-    &:hover &-icon path {
-      stroke: $link-hover;
+      &:hover &-icon path {
+        stroke: $link-hover;
+      }
     }
 
     &:focus-visible {
@@ -101,8 +105,10 @@ $link-hover: #1ea7fd;
     text-decoration: none;
     transition: color .2s ease-in-out;
 
-    &:hover {
-      color: $link-hover;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $link-hover;
+      }
     }
 
     &:focus-visible {

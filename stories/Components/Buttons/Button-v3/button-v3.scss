@@ -15,20 +15,22 @@ $primary-focus: #98d3ff;
   width: auto;
   height: 40px;
 
-  &:hover {
-    .button-v3__circle {
-      width: 100%;
-    }
+  @media (any-hover: hover) {
+    &:hover {
+      .button-v3__circle {
+        width: 100%;
+      }
 
-    .button-v3__text {
-      color: #fff;
-    }
+      .button-v3__text {
+        color: #fff;
+      }
 
-    .button-v3__icon-arrow {
-      transform: translateX(8px);
+      .button-v3__icon-arrow {
+        transform: translateX(8px);
 
-      &::before {
-        transform: scale(1);
+        &::before {
+          transform: scale(1);
+        }
       }
     }
   }

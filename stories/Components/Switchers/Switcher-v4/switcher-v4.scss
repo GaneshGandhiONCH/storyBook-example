@@ -25,9 +25,11 @@ $uncheckedColor: #888888;
       left: 50%;
     }
 
-    &:hover:not(:checked) {
-      & ~ .switcher-v4__toggle .switcher-v4__toggle-label {
-        color: $hoverColorText;
+    @media (any-hover: hover) {
+      &:hover:not(:checked) {
+        & ~ .switcher-v4__toggle .switcher-v4__toggle-label {
+          color: $hoverColorText;
+        }
       }
     }
 

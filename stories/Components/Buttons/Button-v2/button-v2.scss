@@ -19,10 +19,12 @@ $primary-focus: #98d3ff;
   text-decoration: none;
   transition: background-color .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out;
 
-  &:hover {
-    color: #fff;
-    background-color: $primary-hover;
-    border-color: $primary-hover;
+  @media (any-hover: hover) {
+    &:hover {
+      color: #fff;
+      background-color: $primary-hover;
+      border-color: $primary-hover;
+    }
   }
 
   &:focus-visible {

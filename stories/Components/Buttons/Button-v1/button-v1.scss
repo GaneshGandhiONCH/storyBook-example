@@ -19,9 +19,12 @@ $primary-focus: #98d3ff;
   border-radius: 5px;
   transition: background-color .2s ease-in-out;
 
-  &:hover {
-    background-color: $primary-hover;
-    border-color: $primary-hover;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: $primary-hover;
+      border-color: $primary-hover;
+    }
   }
 
   &:focus-visible {
