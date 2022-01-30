@@ -1,0 +1,78 @@
+$checkedColor: #2196F3;
+$uncheckedColor: #c3c3c3;
+
+.switcher_version_1 {
+  display: inline-flex;
+  align-items: center;
+
+  &__input {
+    appearance: none;
+    opacity: 0;
+    position: absolute;
+    z-index: -100;
+
+    &:checked:focus-visible ~ .switcher_version_1__toggle {
+      outline: 4px solid rgba($checkedColor, .15);
+    }
+
+    &:focus-visible ~ .switcher_version_1__toggle {
+      outline: 4px solid rgba($uncheckedColor, .35);
+    }
+
+    &:checked ~ .switcher_version_1__toggle {
+      background-color: $checkedColor;
+
+      &:after {
+        transform: translateX(2rem);
+      }
+    }
+
+    &:disabled {
+
+      & ~ .switcher_version_1__toggle {
+        opacity: .35;
+        pointer-events: none;
+      }
+
+      & ~ .switcher_version_1__label {
+        opacity: .35;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__label {
+    margin: 0 6px;
+    cursor: pointer;
+    transition: color .2s ease-in-out;
+
+    &:hover {
+      color: $checkedColor;
+    }
+  }
+
+  &__toggle {
+    display: block;
+    width: 4.4rem;
+    height: 2.4rem;
+    background-color: $uncheckedColor;
+    border-radius: 2rem;
+    user-select: none;
+    position: relative;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+
+    &:after {
+      content: '';
+      display: block;
+      height: 2rem;
+      width: 2rem;
+      position: absolute;
+      top: .2rem;
+      left: 2px;
+      background-color: #fff;
+      border-radius: 2rem;
+      transition: transform .3s ease-in-out;
+    }
+  }
+}

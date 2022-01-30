@@ -10,6 +10,9 @@
 
 //============= Components ===============//
 
+// Switchers
+@import "stories/Components/Switchers/Switcher-v1/switcher-v1";
+
 // Buttons
 @import "stories/Components/Buttons/Button-v1/button-v1";
 @import "stories/Components/Buttons/Button-v2/button-v2";
@@ -19,7 +22,7 @@
 @import "stories/Components/LangSwitchers/LangSwitcher-v1/lang-switcher-v1";
 
 // Tickers
-@import "stories/Components/Tickers/Ticker-v1/ticker";
+@import "stories/Components/Tickers/Ticker-v1/ticker-v1";
 
 // Hamburgers
 @import "stories/Components/Hamburgers/Hamburger-v1/hamburger";
