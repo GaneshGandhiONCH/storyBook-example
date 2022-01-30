@@ -27,12 +27,14 @@ $uncheckedColor: #c3c3c3;
         &:nth-child(1) {
           transform: rotateY(0);
           left: 0;
+          -webkit-backface-visibility: visible;
           backface-visibility: visible;
           background-color: $checkedColor;
         }
 
         &:nth-child(2) {
           transform: rotateY(180deg);
+          -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
           background-color: $checkedColor;
         }
@@ -91,15 +93,19 @@ $uncheckedColor: #c3c3c3;
       top: 0;
       left: 0;
       border-radius: 4px;
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
       transition: transform 0.4s ease-in-out, background-color 0.4s ease-in-out;
 
       &:nth-child(1) {
         background-color: $uncheckedColor;
         transform: rotateY(-180deg);
         backface-visibility: visible;
+        -webkit-backface-visibility: visible;
       }
 
       &:nth-child(2) {
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         background-color: $uncheckedColor;
       }
