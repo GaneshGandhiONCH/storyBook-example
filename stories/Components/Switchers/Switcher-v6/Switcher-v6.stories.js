@@ -36,5 +36,5 @@ Switcher_version_6.args = {
   labelOff: 'off',
   checked: true,
   disabled: false,
-  withLabel: true,
+  withLabel: false,
 };
