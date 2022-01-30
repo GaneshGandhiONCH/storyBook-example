@@ -1,6 +1,6 @@
 export default {
   title: 'Components/Switchers',
-  component: 'Switcher_version_2',
+  component: 'Switcher_version_3',
   argTypes: {
     label: { control: 'text' },
     inputName: { control: 'text' },
@@ -11,23 +11,23 @@ export default {
 };
 
 const Template = ({ label, inputName, checked, disabled, withLabel }) => {
-  return `<label class="switcher-v2">
-            <input class="switcher-v2__input" 
+  return `<label class="switcher-v3">
+            <input class="switcher-v3__input" 
                    type="checkbox" 
                    ${checked ? 'checked' : ''} 
                    ${disabled ? 'disabled' : ''}
                    name="${inputName}"
             >
-            <span class="switcher-v2__toggle"></span>
-            ${withLabel ? `<span class="switcher-v2__label">${label}</span>` : ''} 
+            <span class="switcher-v3__toggle"></span>
+            ${withLabel ? `<span class="switcher-v3__label">${label}</span>` : ''} 
           </label>`;
 };
 
-export const Switcher_version_2 = Template.bind({});
-Switcher_version_2.args = {
-  label: 'Flat Switcher',
+export const Switcher_version_3 = Template.bind({});
+Switcher_version_3.args = {
+  label: 'Material Switcher',
   inputName: 'checkbox-name',
-  checked: false,
+  checked: true,
   disabled: false,
   withLabel: true,
 };
