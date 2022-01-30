@@ -89,15 +89,15 @@ $uncheckedColor: #c3c3c3;
       left: 0;
       backface-visibility: hidden;
       border-radius: 4px;
-      transition: transform 0.4s ease-in-out;
+      transition: transform 0.4s ease-in-out, background-color 0.4s ease-in-out;
 
       &:nth-child(1) {
-        background: $checkedColor;
+        background-color: $checkedColor;
         transform: rotateY(-180deg);
       }
 
       &:nth-child(2) {
-        background: $uncheckedColor;
+        background-color: $uncheckedColor;
       }
     }
   }
