@@ -1,9 +1,11 @@
-# StoryBook by Verstuha-Bratuha
+# StoryBook by Frontuha-Bratuha
 
 Это репозиторий где я буду хранить компоненты и блоки. 
 Расматривайте это как набор готовых решений, которые нужно будет совсем немного доделать под свой проект.
 
 Хранилище компонентов и блоков - [StoryBook ](https://basovich.github.io/storyBook/storybook-static/)
+
+[Телеграмм канал](https://t.me/frontuha_bratuha)
 
 ## Как это работает:
 1. Выбираем нужный нам компонент. 
