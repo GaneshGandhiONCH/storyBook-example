@@ -1,7 +1,7 @@
 $checkedColor: #2196F3;
 $uncheckedColor: #c3c3c3;
 
-.switcher_version_1 {
+.switcher-version-1 {
   display: inline-flex;
   align-items: center;
 
@@ -11,15 +11,15 @@ $uncheckedColor: #c3c3c3;
     position: absolute;
     z-index: -100;
 
-    &:checked:focus-visible ~ .switcher_version_1__toggle {
+    &:checked:focus-visible ~ .switcher-version-1__toggle {
       outline: 4px solid rgba($checkedColor, .15);
     }
 
-    &:focus-visible ~ .switcher_version_1__toggle {
+    &:focus-visible ~ .switcher-version-1__toggle {
       outline: 4px solid rgba($uncheckedColor, .35);
     }
 
-    &:checked ~ .switcher_version_1__toggle {
+    &:checked ~ .switcher-version-1__toggle {
       background-color: $checkedColor;
 
       &:after {
@@ -29,12 +29,12 @@ $uncheckedColor: #c3c3c3;
 
     &:disabled {
 
-      & ~ .switcher_version_1__toggle {
+      & ~ .switcher-version-1__toggle {
         opacity: .35;
         pointer-events: none;
       }
 
-      & ~ .switcher_version_1__label {
+      & ~ .switcher-version-1__label {
         opacity: .35;
         pointer-events: none;
       }

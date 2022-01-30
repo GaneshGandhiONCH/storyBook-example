@@ -11,15 +11,15 @@ export default {
 };
 
 const Template = ({ label, inputName, checked, disabled, withLabel }) => {
-  return `<label class="switcher_version_1">
-            <input class="switcher_version_1__input" 
+  return `<label class="switcher-version-1">
+            <input class="switcher-version-1__input" 
                    type="checkbox" 
                    ${checked ? 'checked' : ''} 
                    ${disabled ? 'disabled' : ''}
                    name="${inputName}"
             >
-            <span class="switcher_version_1__toggle"></span>
-            ${withLabel ? `<span class="switcher_version_1__label">${label}</span>` : '' }            
+            <span class="switcher-version-1__toggle"></span>
+            ${withLabel ? `<span class="switcher-version-1__label">${label}</span>` : '' }            
           </label>`;
 };
 
