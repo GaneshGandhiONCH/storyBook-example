@@ -1,7 +1,7 @@
 import {phoneMask} from './phoneMask';
 
 export default {
-  title: 'Components/InputMasks',
+  title: 'Components/PhoneMasks',
   component: 'PhoneMask_version_1',
   argTypes: {
     mask: { control: 'text' },
