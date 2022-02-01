@@ -3,7 +3,7 @@ export default {
   component: 'Textfield_version_1',
   argTypes: {
     tag: {
-      options: ['input type="text"', 'textarea'],
+      options: ['input', 'textarea'],
       control: { type: 'select' }
     },
     label: { control: 'text' },
@@ -28,14 +28,14 @@ const Template = ({ label, inputName, value, disabled, tag }) => {
                       ${disabled ? 'disabled' : ''}>${value}</textarea>`;
 
   return `<label class="textfield-v1">
-              ${tag === 'input type="text"' ? input : textarea}
+              ${tag === 'textarea' ? textarea : input}
               <span class="textfield-v1__label">${label}</span>
           </label>`;
 };
 
 export const Textfield_version_1 = Template.bind({});
 Textfield_version_1.args = {
-  tag: 'input type="text"',
+  tag: 'input',
   label: 'Textfield',
   value: '',
   inputName: 'name',
