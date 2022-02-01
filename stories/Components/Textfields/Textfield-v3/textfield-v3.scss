@@ -28,9 +28,11 @@ $dark: #000;
     caret-color: $checkedColor;
     transition: border-bottom 0.2s, background-color 0.2s;
 
-    &:hover {
-      border-bottom-color: rgba($dark, 0.87);
-      background-color: rgba($dark, 0.08);
+    @media (any-hover: hover) {
+      &:hover {
+        border-bottom-color: rgba($dark, 0.87);
+        background-color: rgba($dark, 0.08);
+      }
     }
 
     &:not(:focus):placeholder-shown + .textfield-v3__label {
