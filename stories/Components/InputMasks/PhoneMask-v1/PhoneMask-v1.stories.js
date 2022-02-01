@@ -1,4 +1,4 @@
-import './phone-mask';
+import {phoneMask} from './phone-mask';
 
 export default {
   title: 'Components/InputMasks',
@@ -13,7 +13,7 @@ export default {
 
 document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
-    phone_mask('[data-phone-mask]', '+38 (', '+38 (___) ___ __ __');
+    phoneMask('[data-phone-mask]', '+38 (0', '+38 (0__) ___ __ __');
   }, 0)
 })
 
@@ -40,5 +40,5 @@ PhoneMask_version_1.args = {
 };
 
 window.addEventListener('load', () => {
-  phone_mask('[data-phone-mask]', '+38 (', '+38 (___) ___ __ __');
+  phoneMask('[data-phone-mask]', '+38 (', '+38 (___) ___ __ __');
 })
