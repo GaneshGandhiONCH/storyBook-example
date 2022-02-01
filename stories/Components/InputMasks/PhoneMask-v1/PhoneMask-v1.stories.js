@@ -1,9 +1,10 @@
-import {phoneMask} from './phone-mask';
+import {phoneMask} from './phoneMask';
 
 export default {
   title: 'Components/InputMasks',
   component: 'PhoneMask_version_1',
   argTypes: {
+    mask: { control: 'text' },
     label: { control: 'text' },
     value: { control: 'text' },
     disabled: { control: 'boolean' },
@@ -13,11 +14,11 @@ export default {
 
 document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
-    phoneMask('[data-phone-mask]', '+38 (0', '+38 (0__) ___ __ __');
+    phoneMask();
   }, 0)
 })
 
-const Template = ({ label, inputName, value, disabled }) => {
+const Template = ({ mask, label, inputName, value, disabled }) => {
   return `<label class="textfield-v2">
               <input class="textfield-v2__field"
                     type="text"
@@ -25,7 +26,7 @@ const Template = ({ label, inputName, value, disabled }) => {
                     value="${value}"
                     placeholder=" " 
                     ${disabled ? 'disabled' : ''}
-                    data-phone-mask
+                    data-phone-mask="${mask}"
                   >
               <span class="textfield-v2__label">${label}</span>
           </label>`;
@@ -33,12 +34,13 @@ const Template = ({ label, inputName, value, disabled }) => {
 
 export const PhoneMask_version_1 = Template.bind({});
 PhoneMask_version_1.args = {
-  label: 'Enter your phone',
+  mask: '+38 (0__) ___ __ __',
+  label: 'Enter phone',
   value: '',
   inputName: 'user-phone',
   disabled: false,
 };
 
 window.addEventListener('load', () => {
-  phoneMask('[data-phone-mask]', '+38 (', '+38 (___) ___ __ __');
+  phoneMask();
 })
