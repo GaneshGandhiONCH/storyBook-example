@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const Template = ({ mask, label, inputName, value, disabled }) => {
   return `<label class="textfield-v2">
               <input class="textfield-v2__field"
-                    type="text"
+                    type="tel"
                     name="${inputName}" 
                     value="${value}"
                     placeholder=" " 

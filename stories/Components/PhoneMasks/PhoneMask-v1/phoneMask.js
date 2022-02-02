@@ -23,7 +23,7 @@ export function phoneMask() {
 
         // insert default mask if user try delete him
         const pos = this.selectionStart;
-        if (pos < currentDefaultMask.length) {
+        if (pos < currentDefaultMask.length && event.inputType === 'deleteContentBackward') {
             event.preventDefault();
             this.value = currentDefaultMask;
             this.selectionStart = currentDefaultMask.length;
