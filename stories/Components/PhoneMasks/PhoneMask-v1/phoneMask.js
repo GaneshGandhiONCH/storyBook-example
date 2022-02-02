@@ -8,14 +8,10 @@ export function phoneMask() {
         phoneInput.addEventListener("input", initMask, false);
         phoneInput.addEventListener("focus", initMask, false);
         phoneInput.addEventListener("blur", function() {
-            if (this.value.length !== this.dataset.phoneMask.length) {
+            const mask = this.dataset.phoneMask;
+            const currentDefaultMask = mask.substring(0, mask.indexOf("_"));
+            if (this.value.length === currentDefaultMask.length) {
                 this.value = '';
-            }
-        }, false);
-        phoneInput.addEventListener("paste", function(event) {
-            const clipboardText = (event.clipboardData || window.clipboardData).getData('text');
-            if (clipboardText.indexOf(this.value) === 0) {
-                this.value = clipboardText;
             }
         }, false);
     });
