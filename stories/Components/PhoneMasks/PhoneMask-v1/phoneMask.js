@@ -18,12 +18,17 @@ export function phoneMask() {
 
     // FUNCTIONS & METHODS
     function initMask(event) {
-        let keyCode;
-        event.keyCode && (keyCode = event.keyCode);
-        const pos = this.selectionStart;
-        if (pos < 3) event.preventDefault();
         const mask = this.dataset.phoneMask;
         const currentDefaultMask = mask.substring(0, mask.indexOf("_"));
+
+        // insert default mask if user try delete him
+        const pos = this.selectionStart;
+        if (pos < currentDefaultMask.length) {
+            event.preventDefault();
+            this.value = currentDefaultMask;
+            this.selectionStart = currentDefaultMask.length;
+        }
+
         let i = 0;
         const def = mask.replace(/\D/g, "");
 
@@ -44,7 +49,7 @@ export function phoneMask() {
 
         reg = new RegExp("^" + reg + "$");
 
-        if (!reg.test(this.value) || this.value.length < currentDefaultMask.length || keyCode > 47 && keyCode < 58) {
+        if (!reg.test(this.value) || this.value.length < currentDefaultMask.length) {
             this.value = new_value;
         }
     }
