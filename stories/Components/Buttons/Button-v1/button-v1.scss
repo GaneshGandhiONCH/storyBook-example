@@ -8,17 +8,16 @@ $primary-focus: #98d3ff;
   text-align: center;
   width: auto;
   font-size: 1.6rem;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: .1rem;
-  cursor: pointer;
   line-height: 1;
+  cursor: pointer;
   text-decoration: none;
   color: #fff;
   background-color: $primary;
-  border: 1px solid $primary;
+  border: 0;
   border-radius: 5px;
   transition: background-color .2s ease-in-out;
-
 
   @media (any-hover: hover) {
     &:hover {
