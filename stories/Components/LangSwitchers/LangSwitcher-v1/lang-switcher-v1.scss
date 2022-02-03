@@ -7,7 +7,7 @@ $link-hover: #1ea7fd;
   padding-bottom: 10px;
   margin-top: 10px;
 
-  @media (any-hover: hover) {
+  @media (min-width: $media-tablet-lg) {
     &:hover {
       .lang-switcher-v1__list {
         pointer-events: initial;
@@ -29,7 +29,7 @@ $link-hover: #1ea7fd;
     background-color: transparent;
     cursor: pointer;
 
-    @media (any-hover: hover) {
+    @media (min-width: $media-tablet-lg) {
       &:hover &-name {
         color: $link-hover;
       }
