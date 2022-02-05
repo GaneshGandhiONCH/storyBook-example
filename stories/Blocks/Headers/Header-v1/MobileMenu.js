@@ -9,7 +9,7 @@ export function MobileMenu() {
   // INITS
   new DropDownLinks();
   new LangSwitcher();
-  initAnimationStopper();
+  initStopAnimationOnResize();
   // new Hamburger();
 
   // VARS
