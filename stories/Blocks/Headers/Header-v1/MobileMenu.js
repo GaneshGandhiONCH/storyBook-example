@@ -1,10 +1,14 @@
 import {DropDownLinks} from "./DropDownLInks";
+import {LangSwitcher} from "../../../Components/LangSwitchers/LangSwitcher-v1/LangSwitcher";
+import {Hamburger} from "../../../Components/Hamburgers/Hamburger-v1/Hamburger";
 import "../../../global/scripts/scroll-locker";
 
 
 export function MobileMenu() {
   // INITS
   new DropDownLinks();
+  new LangSwitcher();
+  // new Hamburger();
 
   // VARS
   const $this = this;
