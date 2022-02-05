@@ -21,7 +21,7 @@ export function DropDownLinks() {
 
   // HANDLERS
   function handleOnClickDropdownButton(event) {
-    if (window.innerWidth < 1280) {
+    if (window.innerWidth < 1024) {
       event.preventDefault();
       $this.toggleDropdown(this);
     }
@@ -66,7 +66,7 @@ export function DropDownLinks() {
     anime({
       targets: dropdownList,
       height: [0, dropdownList.scrollHeight],
-      duration: 500,
+      duration: 300,
       easing: 'easeOutExpo',
       complete: function() {
         dropdownList.style.height = 'auto';
