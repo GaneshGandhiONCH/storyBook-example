@@ -36,3 +36,19 @@ button {
   font-family: 'Open Sans', sans-serif;
   cursor: pointer;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-delay: -1s !important;
+    animation-duration: 1s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01s !important;
+  }
+}
+
+.resize-animation-stopper * {
+  animation-duration: 0s !important;
+  transition-duration: 0s !important;
+}

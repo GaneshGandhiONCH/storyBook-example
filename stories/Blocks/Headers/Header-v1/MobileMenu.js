@@ -2,12 +2,14 @@ import {DropDownLinks} from "./DropDownLInks";
 import {LangSwitcher} from "../../../Components/LangSwitchers/LangSwitcher-v1/LangSwitcher";
 import {Hamburger} from "../../../Components/Hamburgers/Hamburger-v1/Hamburger";
 import "../../../global/scripts/scroll-locker";
+import "../../../global/scripts/animation-stopper";
 
 
 export function MobileMenu() {
   // INITS
   new DropDownLinks();
   new LangSwitcher();
+  initAnimationStopper();
   // new Hamburger();
 
   // VARS
