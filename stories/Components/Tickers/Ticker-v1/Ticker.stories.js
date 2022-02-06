@@ -9,7 +9,7 @@ export default {
       options: ['to_right', 'to_left'],
       control: { type: 'select' }
     },
-    duration: '40000'
+    speed: '40000'
   }
 };
 
@@ -19,11 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }, 0)
 })
 
-const Template = ({ text, direction, duration }) => {
+const Template = ({ text, direction, speed }) => {
   return `<div class="ticker-v1" 
                data-ticker
                data-ticker-direction="${direction ? direction : 'to_right'}"
-               data-ticker-duration="${duration ? duration : '40000'}"
+               data-ticker-duration="${speed ? speed : '40000'}"
          >
             <p class="ticker-v1__text" data-ticker-inner>${text}</p>
           </div>`;
@@ -33,7 +33,7 @@ export const Ticker_version_1 = Template.bind({});
 Ticker_version_1.args = {
   text: '/ Yet a team of 20 pros / Products working worldwide / Monthly company growth / Challenging marketing / Advanced development / Products for Mobile & Desktop / Friendly team & flexible work conditions / Ambitious goals / Yet a team of 20 pros / Products working worldwide / Monthly company growth / Challenging marketing / Advanced development / Products for Mobile & Desktop / Friendly team & flexible work conditions / Ambitious goals',
   direction: 'to_right',
-  duration: '40000',
+  speed: '40000',
 };
 
 window.addEventListener('load', () => {

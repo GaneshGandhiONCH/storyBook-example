@@ -1,0 +1,133 @@
+$primary: #1ea7fd;
+
+.checkbox-v1 {
+  z-index: 0;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  cursor: pointer;
+
+  @media (any-hover: hover) {
+    &:hover {
+      .checkbox-v1__fake-checkbox {
+        &:before {
+          transform: translate(-50%, -50%) scale(2.4);
+        }
+      }
+    }
+  }
+
+  &--reverse {
+    flex-direction: row-reverse;
+
+    .checkbox-v1__label {
+      margin-left: 0;
+      margin-right: 6px;
+    }
+  }
+
+  &__input {
+    appearance: none;
+    opacity: 0;
+    position: absolute;
+    z-index: -100;
+
+    &:focus-visible {
+      & ~ .checkbox-v1__fake-checkbox {
+        &:before {
+          transform: translate(-50%, -50%) scale(2.4);
+        }
+      }
+    }
+
+    &:checked {
+      & ~ .checkbox-v1__fake-checkbox {
+        background-color: $primary;
+        border-color: $primary;
+
+        &:before {
+          background-color: $primary;
+        }
+
+        &:after {
+          border-color: #fff;
+        }
+      }
+    }
+
+    &[disabled] {
+      & ~ * {
+        pointer-events: none;
+      }
+
+      & ~ .checkbox-v1__label {
+        color: #888888;
+      }
+
+      & ~ .checkbox-v1__fake-checkbox {
+        border-color: #888888;
+
+        &:before {
+          display: none;
+        }
+      }
+
+      &:checked ~ .checkbox-v1__fake-checkbox {
+        border-color: #888888;
+        background-color: #888888;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__fake-checkbox {
+    display: inline-flex;
+    border: solid 2px rgba(0, 0, 0, 0.6);
+    border-radius: 2px;
+    width: 18px;
+    height: 18px;
+    position: relative;
+    transition: border-color 0.2s, background-color 0.2s;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 10px;
+      height: 5px;
+      border: solid 2px transparent;
+      border-right: none;
+      border-top: none;
+      transform: translate(-50%, -70%) rotate(-45deg);
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-color: #222;
+      border-radius: 50%;
+      opacity: .075;
+      pointer-events: none;
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform .2s ease-in-out, background-color .2s ease-in-out;
+    }
+  }
+
+  &__label {
+    margin-left: 6px;
+    margin-right: 0;
+    color: #222;
+  }
+}
