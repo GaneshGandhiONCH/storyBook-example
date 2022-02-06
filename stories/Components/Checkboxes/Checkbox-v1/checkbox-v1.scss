@@ -1,4 +1,6 @@
 $primary: #1ea7fd;
+$textColor: #222;
+$disableColor: #888;
 
 .checkbox-v1 {
   z-index: 0;
@@ -63,11 +65,11 @@ $primary: #1ea7fd;
       }
 
       & ~ .checkbox-v1__label {
-        color: #888888;
+        color: $disableColor;
       }
 
       & ~ .checkbox-v1__fake-checkbox {
-        border-color: #888888;
+        border-color: $disableColor;
 
         &:before {
           display: none;
@@ -75,8 +77,8 @@ $primary: #1ea7fd;
       }
 
       &:checked ~ .checkbox-v1__fake-checkbox {
-        border-color: #888888;
-        background-color: #888888;
+        border-color: $disableColor;
+        background-color: $disableColor;
 
         &:before {
           display: none;
@@ -87,7 +89,7 @@ $primary: #1ea7fd;
 
   &__fake-checkbox {
     display: inline-flex;
-    border: solid 2px rgba(0, 0, 0, 0.6);
+    border: solid 2px rgba($textColor, 0.6);
     border-radius: 2px;
     width: 18px;
     height: 18px;
@@ -116,7 +118,7 @@ $primary: #1ea7fd;
       position: absolute;
       top: 50%;
       left: 50%;
-      background-color: #222;
+      background-color: $textColor;
       border-radius: 50%;
       opacity: .075;
       pointer-events: none;
@@ -128,6 +130,6 @@ $primary: #1ea7fd;
   &__label {
     margin-left: 6px;
     margin-right: 0;
-    color: #222;
+    color: $textColor;
   }
 }
