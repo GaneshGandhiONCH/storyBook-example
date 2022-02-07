@@ -186,7 +186,7 @@ $link-hover-color: #1ea7fd;
 
     &--visible-on-focus {
       @media (min-width: $media-tablet-lg) {
-        transform: translateY(-20px);
+        transform: translateY(-10px);
         opacity: 1;
         pointer-events: auto;
       }
@@ -348,7 +348,7 @@ $link-hover-color: #1ea7fd;
     .lang-switcher-v1__list--open {
       @media (min-width: $media-tablet-lg ) {
         pointer-events: initial;
-        transform: translateY(10px);
+        transform: translateY(0);
         opacity: 1;
       }
     }
