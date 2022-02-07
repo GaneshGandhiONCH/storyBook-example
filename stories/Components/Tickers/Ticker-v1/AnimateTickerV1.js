@@ -4,7 +4,7 @@ export function AnimateTickerV1() {
 
   tickers.forEach((ticker) => {
     const innerEl = ticker.querySelector('[data-ticker-inner]');
-    const duration = +ticker.dataset.tickerDuration;
+    const speed = +ticker.dataset.tickerSpeed;
     const direction = ticker.dataset.tickerDirection;
     const innerWidth = innerEl.offsetWidth;
     const cloneEl = innerEl.cloneNode(true);
@@ -18,7 +18,7 @@ export function AnimateTickerV1() {
     let translateX;
 
     requestAnimationFrame(function step(now) {
-      progress = (now - start) / duration;
+      progress = (now - start) / speed;
 
       if (progress > 1) {
         progress %= 1;

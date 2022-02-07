@@ -23,7 +23,7 @@ const Template = ({ text, direction, speed }) => {
   return `<div class="ticker-v1" 
                data-ticker
                data-ticker-direction="${direction ? direction : 'to_right'}"
-               data-ticker-duration="${speed ? speed : '40000'}"
+               data-ticker-speed="${speed ? speed : '40000'}"
          >
             <p class="ticker-v1__text" data-ticker-inner>${text}</p>
           </div>`;
