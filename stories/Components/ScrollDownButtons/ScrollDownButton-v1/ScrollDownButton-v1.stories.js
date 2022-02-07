@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 const Template = () => {
-  return `<button class="scroll-down-button-v1" type="submit" data-scroll-down-button>
+  return `<button class="scroll-down-button-v1" type="button" data-scroll-down-button>
             <span class="scroll-down-button-v1__item"></span>
             <span class="scroll-down-button-v1__item"></span>
             <span class="scroll-down-button-v1__item"></span>
