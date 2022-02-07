@@ -2,7 +2,7 @@ $primary: #1ea7fd;
 $textColor: #222;
 $disableColor: #888;
 
-.checkbox-v1 {
+.radio-input-v1 {
   z-index: 0;
   position: relative;
   display: inline-flex;
@@ -13,7 +13,7 @@ $disableColor: #888;
 
   @media (any-hover: hover) {
     &:hover {
-      .checkbox-v1__fake-checkbox {
+      .radio-input-v1__fake-radio {
         &:before {
           transform: translate(-50%, -50%) scale(2.4);
         }
@@ -24,7 +24,7 @@ $disableColor: #888;
   &--reverse {
     flex-direction: row-reverse;
 
-    .checkbox-v1__label {
+    .radio-input-v1__label {
       margin-left: 0;
       margin-right: 8px;
     }
@@ -37,7 +37,7 @@ $disableColor: #888;
     z-index: -100;
 
     &:focus-visible {
-      & ~ .checkbox-v1__fake-checkbox {
+      & ~ .radio-input-v1__fake-radio {
         &:before {
           transform: translate(-50%, -50%) scale(2.4);
         }
@@ -45,8 +45,7 @@ $disableColor: #888;
     }
 
     &:checked {
-      & ~ .checkbox-v1__fake-checkbox {
-        background-color: $primary;
+      & ~ .radio-input-v1__fake-radio {
         border-color: $primary;
 
         &:before {
@@ -54,7 +53,7 @@ $disableColor: #888;
         }
 
         &:after {
-          border-color: #fff;
+          transform: scale(1);
         }
       }
     }
@@ -64,11 +63,11 @@ $disableColor: #888;
         pointer-events: none;
       }
 
-      & ~ .checkbox-v1__label {
+      & ~ .radio-input-v1__label {
         color: $disableColor;
       }
 
-      & ~ .checkbox-v1__fake-checkbox {
+      & ~ .radio-input-v1__fake-radio {
         border-color: $disableColor;
 
         &:before {
@@ -76,7 +75,7 @@ $disableColor: #888;
         }
       }
 
-      &:checked ~ .checkbox-v1__fake-checkbox {
+      &:checked ~ .radio-input-v1__fake-radio {
         border-color: $disableColor;
         background-color: $disableColor;
 
@@ -87,12 +86,12 @@ $disableColor: #888;
     }
   }
 
-  &__fake-checkbox {
+  &__fake-radio {
     display: inline-flex;
     border: solid 2px rgba($textColor, 0.6);
-    border-radius: 2px;
-    width: 18px;
-    height: 18px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
     position: relative;
     transition: border-color 0.2s, background-color 0.2s;
 
@@ -100,14 +99,15 @@ $disableColor: #888;
       content: "";
       display: block;
       position: absolute;
-      top: 50%;
-      left: 50%;
+      top: 3px;
+      left: 3px;
       width: 10px;
-      height: 5px;
-      border: solid 2px transparent;
-      border-right: none;
-      border-top: none;
-      transform: translate(-50%, -70%) rotate(-45deg);
+      height: 10px;
+      border-radius: 50%;
+      background-color: $primary;
+      transition: transform 0.2s ease-in-out;
+      transform-origin: center;
+      transform: scale(0);
     }
 
     &:before {
