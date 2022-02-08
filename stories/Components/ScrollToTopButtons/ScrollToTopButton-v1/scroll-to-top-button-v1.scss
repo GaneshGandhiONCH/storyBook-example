@@ -1,0 +1,70 @@
+$primary: #1ea7fd;
+$primary-hover: #0495f3;
+$primary-active: #0891ea;
+$primary-focus: #98d3ff;
+
+$media-mobile-sm: 320px;
+$media-mobile-md: 360px;
+$media-mobile-lg: 400px;
+$media-tablet-sm: 540px;
+$media-tablet-md: 768px;
+$media-tablet-lg: 1024px;
+$media-desktop-sm: 1280px;
+$media-desktop-md: 1440px;
+$media-desktop-lg: 1600px;
+$media-desktop-xlg: 1920px;
+
+.scroll-to-top-button-v1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  bottom: 20px;
+  right: 20px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 2px 15px rgba($primary, .25);
+  background-color: $primary;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: background-color .2s ease-in-out, opacity .2s ease-in-out, transform .2s ease-in-out;
+
+  @media (min-width: $media-tablet-lg) {
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+  }
+
+  &--visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: $primary-hover;
+    }
+  }
+
+  &:focus-visible {
+    outline: 4px solid $primary-focus;
+  }
+
+  &:active {
+    background-color: $primary-active;
+  }
+
+  &__icon {
+    width: 18px;
+    height: auto;
+    fill: #fff;
+    margin-bottom: 2px;
+  }
+}
