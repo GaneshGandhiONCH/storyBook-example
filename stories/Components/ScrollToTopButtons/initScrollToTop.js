@@ -1,10 +1,10 @@
 export const initScrollToTop = () => {
   // VARS
-  const target = document.querySelector('[data-scroll-to-top-button]');
-  if (!target) return;
+  const button = document.querySelector('[data-scroll-to-top-button]');
+  if (!button) return;
 
   // LISTENERS
-  target.addEventListener('click', function () {
+  button.addEventListener('click', function () {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
@@ -13,7 +13,7 @@ export const initScrollToTop = () => {
 
   window.addEventListener('scroll', function () {
     window.pageYOffset > 400
-      ? target.classList.add('scroll-to-top-button-v1--visible')
-      : target.classList.remove('scroll-to-top-button-v1--visible');
+      ? button.classList.add('scroll-to-top-button-v1--visible')
+      : button.classList.remove('scroll-to-top-button-v1--visible');
   })
 };
