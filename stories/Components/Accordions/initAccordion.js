@@ -36,10 +36,6 @@ export const initAccordion = () => {
     }
   }
 
-  function toggleAccordion(accordion) {
-    accordion.classList.contains(activeClass) ? closeAccordion(accordion) : openAccordion(accordion);
-  }
-
   // FUNCTIONS
   function openAccordion(accordion) {
     const body = accordion.querySelector('[data-accordion-body]');
@@ -69,5 +65,9 @@ export const initAccordion = () => {
       easing: 'linear',
       duration: duration,
     });
+  }
+
+  function toggleAccordion(accordion) {
+    accordion.classList.contains(activeClass) ? closeAccordion(accordion) : openAccordion(accordion);
   }
 };
