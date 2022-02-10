@@ -1,81 +1,53 @@
-export const initAccordions = () => {
-  // VARS
-  const accordionsToggler = document.querySelectorAll('[data-accordion-toggler]');
-  const activeClass = 'accordion-v1--is-open'
+import anime from 'animejs/lib/anime.es.js';
 
-  // LISTENERS
-  accordionsToggler.forEach(toggle => {
-    toggle.addEventListener('click', handleOnClickToggle, false);
+export const initAccordion = () => {
+  // VARS
+  const toggles = document.querySelectorAll('[data-accordion-toggle]');
+  if (!toggles.length) return;
+  let duration = 300;
+  const activeClass = 'is-open-accordion';
+
+  // EVENTS
+  toggles.forEach((toggle) => {
+    toggle.addEventListener('click', handleOnClick, false);
   });
 
   // HANDLERS
-  function handleOnClickToggle() {
-    const accordions = this.closest('[data-accordions]');
+  function handleOnClick() {
+    const accordion = this.closest('[data-accordion]');
 
-    if (accordions.dataset.accordions === 'close-previous') {
-      closePrevious(this);
-      toggle(this);
-    } else {
-      toggle(this);
-    }
+    accordion.classList.contains(activeClass) ? closeAccordion(accordion) : openAccordion(accordion);
+    changeButtonText(this);
   }
 
   // FUNCTIONS
-  function toggle(toggler) {
-    const accordion = toggler.closest('[data-accordion]');
-
-    accordion.classList.toggle(activeClass);
-
-    accordion.classList.contains(activeClass)
-      ? open(toggler)
-      : close(toggler);
-  }
-
-  function open(toggler) {
-    const accordion = toggler.closest('[data-accordion]');
+  function openAccordion(accordion) {
     const body = accordion.querySelector('[data-accordion-body]');
+    const height = body.scrollHeight;
+    accordion.classList.add(activeClass);
 
-    body.style.maxHeight = body.scrollHeight + "px";
-    setAriaExpanded(accordion, body);
+    anime({
+      targets: body,
+      height: [0, height],
+      easing: 'linear',
+      duration: duration,
+      complete: function () {
+        body.style.height = 'auto';
+      },
+    });
   }
 
-  function close(toggler) {
-    const accordion = toggler.closest('[data-accordion]');
+  function closeAccordion(accordion) {
     const body = accordion.querySelector('[data-accordion-body]');
+    const height = body.scrollHeight;
+    body.style.height = `${height}px`;
+    accordion.classList.remove(activeClass);
 
-    body.style.maxHeight = '';
-    setAriaNotExpanded(accordion, body);
+    anime({
+      targets: body,
+      height: 0,
+      easing: 'linear',
+      duration: duration,
+    });
   }
-
-  function closePrevious(toggler) {
-    const accordions = toggler.closest('[data-accordions]');
-    const accordion = toggler.closest('[data-accordion]');
-    const activeAccordion = accordions.querySelector(`.${activeClass}`);
-    if (!activeAccordion) return;
-    const bodyActiveAccordion = activeAccordion.querySelector('[data-accordion-body]');
-    const body = accordion.querySelector('[data-accordion-body]');
-
-    // if can close all when close-previous
-    if (accordion !== activeAccordion) {
-      activeAccordion.classList.remove(activeClass);
-    }
-
-    // if can not close all when close-previous
-    // activeAccordion.classList.remove(activeClass);
-
-    bodyActiveAccordion.style.maxHeight = null;
-
-    setAriaExpanded(accordion, body);
-    setAriaNotExpanded(activeAccordion, bodyActiveAccordion);
-  }
-
-  function setAriaExpanded(accordion, accordionBody) {
-    accordion.setAttribute('aria-expanded', 'true');
-    accordionBody.setAttribute('aria-hidden', 'false');
-  }
-
-  function setAriaNotExpanded(accordion, accordionBody) {
-    accordion.setAttribute('aria-expanded', 'false');
-    accordionBody.setAttribute('aria-hidden', 'true');
-  }
-}
+};
