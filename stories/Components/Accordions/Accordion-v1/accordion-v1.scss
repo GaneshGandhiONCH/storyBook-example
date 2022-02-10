@@ -68,7 +68,7 @@ $transform-duration: .4s;
   }
 
   &__body {
-    max-height: 0;
+    height: 0;
     overflow: hidden;
     max-width: 910px;
     transition: max-height $transform-duration ease-in-out;

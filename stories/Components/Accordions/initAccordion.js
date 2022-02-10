@@ -5,7 +5,7 @@ export const initAccordion = () => {
   const toggles = document.querySelectorAll('[data-accordion-toggle]');
   if (!toggles.length) return;
   let duration = 300;
-  const activeClass = 'is-open-accordion';
+  const activeClass = 'accordion-v1--is-open';
 
   // EVENTS
   toggles.forEach((toggle) => {
@@ -15,9 +15,29 @@ export const initAccordion = () => {
   // HANDLERS
   function handleOnClick() {
     const accordion = this.closest('[data-accordion]');
+    const accordionWrapper = accordion.closest('[data-accordions]');
+    const isNeedClosePrevious = accordionWrapper.dataset.accordions;
 
+    if (isNeedClosePrevious === 'close-previous') {
+      const previousAccordion = accordionWrapper.querySelector(`.${activeClass}`);
+
+      if (previousAccordion) {
+        if (previousAccordion === accordion) {
+          toggleAccordion(accordion);
+        } else {
+          closeAccordion(previousAccordion);
+          openAccordion(accordion);
+        }
+      } else {
+        toggleAccordion(accordion);
+      }
+    } else {
+      toggleAccordion(accordion);
+    }
+  }
+
+  function toggleAccordion(accordion) {
     accordion.classList.contains(activeClass) ? closeAccordion(accordion) : openAccordion(accordion);
-    changeButtonText(this);
   }
 
   // FUNCTIONS

@@ -2,7 +2,7 @@ import {initAccordion} from "../initAccordion";
 
 document.addEventListener('DOMContentLoaded', function () {
   setTimeout(() => {
-      // initAccordions();
+      initAccordion();
   }, 0)
 })
 
@@ -23,13 +23,13 @@ const Template = ({ isNeedClosePrevious, title1, text1, title2, text2 }) => {
             data-accordions="${isNeedClosePrevious ? 'close-previous' : ''}"
           >
             <div class="accordion-v1" data-accordion>
-              <button class="accordion-v1__toggler" data-accordion-toggler>${title1}</button>
+              <button class="accordion-v1__toggler" data-accordion-toggle>${title1}</button>
               <div class="accordion-v1__body" data-accordion-body>
                 <p class="accordion-v1__text">${text1}</p>
               </div>
             </div>
             <div class="accordion-v1" data-accordion>
-              <button class="accordion-v1__toggler" data-accordion-toggler>${title2}</button>
+              <button class="accordion-v1__toggler" data-accordion-toggle>${title2}</button>
               <div class="accordion-v1__body" data-accordion-body>
                 <p class="accordion-v1__text">${text2}</p>
               </div>
@@ -49,6 +49,6 @@ Accordion_version_1.args = {
 window.addEventListener('load', function () {
   if (!document.body.hasAttribute('data-init-accordions')) {
     document.body.setAttribute('data-init-accordions', '');
-    // initAccordions();
+    initAccordion();
   }
 })
