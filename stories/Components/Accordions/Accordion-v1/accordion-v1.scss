@@ -25,13 +25,18 @@ $transform-duration: .4s;
     width: 100%;
     background-color: transparent;
     border: 0;
-    padding: 20px 32px 22px;
+    padding: 12px 20px;
     font-weight: 600;
-    font-size: 2rem;
-    line-height: 95%;
+    font-size: 1.6rem;
     color: $titleColor;
     text-align: left;
     transition: color .2s ease-in-out;
+
+    @media (min-width: $media-desktop-sm) {
+      padding: 20px 32px 22px;
+      font-size: 2rem;
+      line-height: 95%;
+    }
 
     @media (any-hover: hover) {
       &:hover {
@@ -46,10 +51,15 @@ $transform-duration: .4s;
     &:after {
       content: '+';
       display: block;
-      font-size: 3.2rem;
+      font-size: 2.6rem;
       line-height: inherit;
       color: $iconColor;
+      margin-left: 10px;
       transition: transform $transform-duration ease-in-out;
+
+      @media (min-width: $media-desktop-sm) {
+        font-size: 3.2rem;
+      }
 
       .accordion-v1--is-open & {
         transform: rotate(-45deg);
@@ -65,11 +75,17 @@ $transform-duration: .4s;
   }
 
   &__text {
-    padding: 10px 65px 45px;
+    padding: 0 20px 12px;
     font-weight: normal;
-    font-size: 1.8rem;
-    line-height: 2.8rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
     color: $textColor;
     letter-spacing: 1px;
+
+    @media (min-width: $media-desktop-sm) {
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+      padding: 10px 65px 45px;
+    }
   }
 }
