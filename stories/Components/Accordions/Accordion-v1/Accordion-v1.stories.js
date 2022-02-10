@@ -1,8 +1,8 @@
-import {initAccordions} from "../initAccordion";
+import {initAccordion} from "../initAccordion";
 
 document.addEventListener('DOMContentLoaded', function () {
   setTimeout(() => {
-      initAccordions();
+      // initAccordions();
   }, 0)
 })
 
@@ -49,6 +49,6 @@ Accordion_version_1.args = {
 window.addEventListener('load', function () {
   if (!document.body.hasAttribute('data-init-accordions')) {
     document.body.setAttribute('data-init-accordions', '');
-    initAccordions();
+    // initAccordions();
   }
 })
