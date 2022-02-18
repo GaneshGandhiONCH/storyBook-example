@@ -1,0 +1,74 @@
+$primary: #1ea7fd;
+$primary2: #b64bd6;
+$primary-focus: #98d3ff;
+
+.button-v5 {
+  display: inline-flex;
+  width: auto;
+  border-radius: 100px;
+  background-image: linear-gradient(30deg, $primary, $primary2 45%);
+  padding: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+  transition: transform .1s ease-in-out;
+
+  @media (any-hover: hover) {
+    &:hover &__inner  {
+      background-color: transparent;
+      color: #fff;
+    }
+  }
+
+  &:focus-visible {
+    outline: 4px solid $primary-focus;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &__inner {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    font-size: 1.6rem;
+    border-radius: 100px;
+    background-color: #fff;
+    font-weight: 600;
+    color: $primary2;
+    text-decoration: none;
+    line-height: 115%;
+    transition: background-color .2s ease-in-out;
+
+    @media (min-width: $media-desktop-md) {
+      font-size: 2rem;
+      padding: 16px 46px;
+    }
+  }
+
+  &--small &__inner {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+  }
+
+  &--medium &__inner {
+    padding: 1.2rem 3rem;
+    font-size: 1.6rem;
+  }
+
+  &--large &__inner {
+    padding: 1.4rem 4rem;
+    font-size: 1.8rem;
+  }
+
+  &[disabled] {
+    color: rgba(0, 0, 0, 0.40);
+    background-color: rgba(0, 0, 0, 0.12);
+    border: 2px solid rgba(0, 0, 0, 0.12);
+    pointer-events: none;
+    outline: none;
+  }
+}
