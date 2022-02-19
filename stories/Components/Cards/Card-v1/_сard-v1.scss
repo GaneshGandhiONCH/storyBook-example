@@ -1,0 +1,93 @@
+.card-v1 {
+  position: relative;
+  padding: 8px;
+  overflow: hidden;
+  box-shadow: 5px 20px 40px rgba(83, 83, 91, 0.35);
+  width: 300px;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg,rgb(100 212 231) 0,rgb(93 210 230) 100%);
+    filter: blur(84px);
+    transform: translate(59%, 37%);
+    animation: shuffle-background-card 10s ease-in-out infinite;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    background-color: #F6F6F6;
+    padding: 25px 25px 30px 35px;
+
+    @media (min-width: $media-desktop-md) {
+      padding: 50px 24px 45px;
+    }
+  }
+
+  &__icon {
+    width: 46px;
+    height: 46px;
+    min-height: 46px;
+    fill: #5DD2E6;
+
+    @media (min-width: $media-desktop-md) {
+      width: 65px;
+      height: 65px;
+      min-height: 65px;
+    }
+  }
+
+  &__title {
+    margin-top: 35px;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 115%;
+
+    @media (min-width: $media-desktop-md) {
+      margin-top: 32px;
+    }
+  }
+
+  &__text {
+    margin-top: 26px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 125%;
+    color: #63646f;
+
+    @media (min-width: $media-desktop-md) {
+      margin-top: 30px;
+    }
+  }
+}
+
+@keyframes shuffle-background-card {
+  0% {
+    transform: translate(59%, 37%);
+  }
+  20% {
+    transform: translate(-19%, -27%);
+  }
+  40% {
+    transform: translate(49%, 47%);
+  }
+  60% {
+    transform: translate(-10%, -64%);
+  }
+  80% {
+    transform: translate(19%, 27%);
+  }
+  100% {
+    transform: translate(59%, 37%);
+  }
+}
