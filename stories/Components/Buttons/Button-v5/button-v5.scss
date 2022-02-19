@@ -50,18 +50,18 @@ $primary-focus: #98d3ff;
   }
 
   &--small &__inner {
-    padding: 1rem 2rem;
-    font-size: 1.4rem;
-  }
-
-  &--medium &__inner {
     padding: 1.2rem 3rem;
     font-size: 1.6rem;
   }
 
-  &--large &__inner {
+  &--medium &__inner {
     padding: 1.4rem 4rem;
     font-size: 1.8rem;
+  }
+
+  &--large &__inner {
+    padding: 1.6rem 5rem;
+    font-size: 2rem;
   }
 
   &[disabled] {
