@@ -12,8 +12,17 @@ export const initScrollToTop = () => {
   })
 
   window.addEventListener('scroll', function () {
+    toggleButton();
+  })
+
+  // INITS
+  toggleButton();
+
+
+  // FUNCTION
+  function toggleButton() {
     window.pageYOffset > 400
       ? button.classList.add('scroll-to-top-button-v1--visible')
       : button.classList.remove('scroll-to-top-button-v1--visible');
-  })
+  }
 };
