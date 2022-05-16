@@ -68,7 +68,7 @@ $disableColor: #888;
       }
 
       & ~ .checkbox-v2__fake-checkbox {
-        border-color: $disableColor;
+        opacity: .6;
 
         &:before {
           display: none;
@@ -76,8 +76,6 @@ $disableColor: #888;
       }
 
       &:checked ~ .checkbox-v2__fake-checkbox {
-        border-color: $disableColor;
-        background-color: $disableColor;
 
         &:before {
           display: none;
