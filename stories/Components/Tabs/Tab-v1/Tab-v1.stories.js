@@ -1,10 +1,10 @@
-// import {initAccordion} from "../initAccordion";
+import {initTab} from "./initTab";
 
-// document.addEventListener('DOMContentLoaded', function () {
-//   setTimeout(() => {
-//       initAccordion();
-//   }, 0)
-// })
+document.addEventListener('DOMContentLoaded', function () {
+  setTimeout(() => {
+    initTab();
+  }, 0)
+})
 
 export default {
   title: 'Components/Tabs',
@@ -24,7 +24,7 @@ const Template = () => {
                   <option value="tab-5">TAB 5</option>
                 </select>
               </label>
-              <button class="tab-v1__navigation-button" type="button" data-tab-v1-navigation="tab-1">TAB 1</button>
+              <button class="tab-v1__navigation-button tab-v1__navigation-button--active" type="button" data-tab-v1-navigation="tab-1">TAB 1</button>
               <button class="tab-v1__navigation-button" type="button" data-tab-v1-navigation="tab-2">TAB 2</button>
               <button class="tab-v1__navigation-button" type="button" data-tab-v1-navigation="tab-3">TAB 3</button>
               <button class="tab-v1__navigation-button" type="button" data-tab-v1-navigation="tab-4">TAB 4</button>
@@ -48,9 +48,9 @@ const Template = () => {
 
 export const Tab_version_1 = Template.bind({});
 
-// window.addEventListener('load', function () {
-//   if (!document.body.hasAttribute('data-init-accordions')) {
-//     document.body.setAttribute('data-init-accordions', '');
-//     initAccordion();
-//   }
-// })
+window.addEventListener('load', function () {
+  if (!document.body.hasAttribute('data-tab-v1')) {
+    document.body.setAttribute('data-tab-v1', '');
+    initTab();
+  }
+})

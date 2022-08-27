@@ -1,12 +1,21 @@
 $primary: #222;
 $focusColor: #444;
 $disableColor: #888;
+$activeBgButton: #2196F3;
+$bgButton: #98d3ff;
 
 .tab-v1 {
 
   &__navigation {
-    &-select-wrap {
+    @media (min-width: $media-tablet-md) {
+      display: flex;
+      border-bottom: 1px solid #98d3ff;
+    }
 
+    &-select-wrap {
+      @media (min-width: $media-tablet-md) {
+        display: none;
+      }
     }
 
     &-select {
@@ -47,6 +56,35 @@ $disableColor: #888;
 
     &-button {
       display: none;
+
+      @media (min-width: $media-tablet-md) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 24px;
+        border: 0;
+        background-color: $bgButton;
+        color: #fff;
+        transition: background-color .2s ease-in-out;
+
+        &--active {
+          background-color: $activeBgButton;
+        }
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: $activeBgButton;
+        }
+      }
+
+      &:focus-visible {
+        outline: 2px solid $activeBgButton;
+      }
+
+      & + & {
+        margin-left: 10px;
+      }
     }
   }
 

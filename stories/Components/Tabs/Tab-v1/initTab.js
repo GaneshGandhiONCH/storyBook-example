@@ -1,73 +1,57 @@
-import anime from 'animejs/lib/anime.es.js';
-
 export const initTab = () => {
   // VARS
-  const toggles = document.querySelectorAll('[data-tab-navigation-select]');
-  if (!toggles.length) return;
-  let duration = 300;
+  const selectsTab = document.querySelectorAll('[data-tab-v1-navigation-select]');
+  const buttonsTab = document.querySelectorAll('[data-tab-v1-navigation]');
+  if (!selectsTab.length && !buttonsTab.length) return;
+  const activeTabNavigationClass = 'tab-v1__navigation-button--active';
   const activeTabContentClass = 'tab-v1__content--visible';
 
   // EVENTS
-  toggles.forEach((toggle) => {
-    toggle.addEventListener('click', handleOnClick, false);
+  [...selectsTab].forEach(select => {
+    select.addEventListener('change', handleOnChangeSelect, false);
   });
 
+  [...buttonsTab].forEach(button => {
+    button.addEventListener('click', handleOnClickButton, false);
+  })
+
   // HANDLERS
-  function handleOnClick() {
-    const accordion = this.closest('[data-accordion]');
-    const accordionWrapper = accordion.closest('[data-accordions]');
-    const isNeedClosePrevious = accordionWrapper.dataset.accordions;
+  function handleOnChangeSelect() {
+    const tab = this.closest('[data-tab-v1]');
+    const tabContentProperty = this.value;
 
-    if (isNeedClosePrevious === 'close-previous') {
-      const previousAccordion = accordionWrapper.querySelector(`.${activeClass}`);
+    toggleActiveButton(tab, tabContentProperty);
+    toggleTabContent(tab, tabContentProperty);
+  }
 
-      if (previousAccordion) {
-        if (previousAccordion === accordion) {
-          toggleAccordion(accordion);
-        } else {
-          closeAccordion(previousAccordion);
-          openAccordion(accordion);
-        }
-      } else {
-        toggleAccordion(accordion);
-      }
-    } else {
-      toggleAccordion(accordion);
-    }
+  function handleOnClickButton() {
+    const tab = this.closest('[data-tab-v1]');
+    const tabContentProperty = this.dataset.tabV1Navigation;
+
+    toggleActiveButton(tab, tabContentProperty);
+    toggleSelect(tab, tabContentProperty);
+    toggleTabContent(tab, tabContentProperty);
   }
 
   // FUNCTIONS
-  function openAccordion(accordion) {
-    const body = accordion.querySelector('[data-accordion-body]');
-    const height = body.scrollHeight;
-    accordion.classList.add(activeClass);
+  function toggleActiveButton(tab, tabContentProperty) {
+    const previousTabButton = tab.querySelector(`.${activeTabNavigationClass}[data-tab-v1-navigation]`);
+    const nextTabButton = tab.querySelector(`[data-tab-v1-navigation="${tabContentProperty}"]`);
 
-    anime({
-      targets: body,
-      height: [0, height],
-      easing: 'linear',
-      duration: duration,
-      complete: function () {
-        body.style.height = 'auto';
-      },
-    });
+    previousTabButton.classList.remove(activeTabNavigationClass);
+    nextTabButton.classList.add(activeTabNavigationClass);
   }
 
-  function closeAccordion(accordion) {
-    const body = accordion.querySelector('[data-accordion-body]');
-    const height = body.scrollHeight;
-    body.style.height = `${height}px`;
-    accordion.classList.remove(activeClass);
-
-    anime({
-      targets: body,
-      height: 0,
-      easing: 'linear',
-      duration: duration,
-    });
+  function toggleSelect(tab, tabContentProperty) {
+    const select = tab.querySelector('[data-tab-v1-navigation-select]');
+    select.value = tabContentProperty;
   }
 
-  function toggleAccordion(accordion) {
-    accordion.classList.contains(activeClass) ? closeAccordion(accordion) : openAccordion(accordion);
+  function toggleTabContent(tab, tabContentProperty) {
+    const previousTabContent = tab.querySelector(`.${activeTabContentClass}[data-tab-v1-content]`);
+    const nextTabContent = tab.querySelector(`[data-tab-v1-content="${tabContentProperty}"]`);
+
+    previousTabContent.classList.remove(activeTabContentClass);
+    nextTabContent.classList.add(activeTabContentClass);
   }
 };
