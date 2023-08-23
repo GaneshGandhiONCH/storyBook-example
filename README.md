@@ -1,22 +1,22 @@
-# StoryBook by Frontuha-Bratuha
+This is a repository where I will store components and blocks. 
+Consider it as a set of ready-made solutions, which you will need to finalize a little bit for your project.
 
-Это репозиторий где я буду хранить компоненты и блоки. 
-Расматривайте это как набор готовых решений, которые нужно будет совсем немного доделать под свой проект.
+Repository of components and blocks - [StoryBook ](https://basovich.github.io/storyBook/storybook-static/)
 
-Хранилище компонентов и блоков - [StoryBook ](https://basovich.github.io/storyBook/storybook-static/)
+[Telegram channel](https://t.me/frontuha_bratuha)
 
-[Телеграмм канал](https://t.me/frontuha_bratuha)
+## How it works:
+1. Select the component we need. 
+2. In the Controls tab change the necessary settings, add text.
+3. Open the HTML tab, copy the markup and paste it into your project.
+4. Next, find [here](https://github.com/Basovich/storyBook/tree/main/stories) folder with the necessary component/block. The folder will contain a style file and possibly js files.
+5. In the stories.js file you can find the script initialization for the component/block, if there is one. This part of the initialization should be added to your project.
+6. Note, if you copy a block, you will also need to download styles and script for the components that will be in that block.
 
-## Как это работает:
-1. Выбираем нужный нам компонент. 
-2. В закладке Controls меняем необходимые настройки, добавляем текст.
-3. Открываем закладку HTML, копируем разметку и вставляем себе в проект.
-4. Далее находим [тут](https://github.com/Basovich/storyBook/tree/main/stories) папку с необходимым компонентом/блоком. В папке будет находиться файл стилей и возможно js файлы.
-5. В файле stories.js вы сможете найти инициализацию скрипта для компонента/блока, если такой есть. Эту часть инициализации надо добавить в свой проект.
-6. Обратите внимание, если вы копируете блок, то необходимо будет так же скачать стили и скрипт для компонентов, которые будут находиться в этом блоке.
+## Notes 
+All components are encapsulated from each other.
 
-## Заметки 
-Все компоненты инкапсулированый друг от друга.
+Note that my project has [some global styles](https://github.com/Basovich/storyBook/tree/main/stories/global/style) and uses normalize, this has a direct effect on the display of components/blocks.
 
-Обратите внимание, что у моего проекта есть [немного глобальных стилей](https://github.com/Basovich/storyBook/tree/main/stories/global/style) и используеться normalize, это непосрественно влияет на отображение копонентов/блоков.
 
+Translated with www.DeepL.com/Translator (free version)
